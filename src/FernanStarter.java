@@ -3,18 +3,22 @@ import java.util.Scanner;
 public class FernanStarter {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+    //Administrador
     String usuarioAdministrador="Administrador";
     String contraAdministrador="1234";
         int opcionAdmi = 0;
-        int menuadmi = 0;
+        int menubloq = 0;
+        int menuconf = 0;
         String nombreUsuario = "";
     //UsuarioGestor
     String usuarioGestor="Gestor";
     String contraGestor="4321";
         boolean bloqueadoGestor=false;
+    //UsuarioInversor1
     String inversor1="Inversor1";
     String inversorContra="Inversor1";
         boolean bloqueadoInversor1=false;
+    //UsuarioInversor2
     String inversor2="Inversor2";
     String inversor2Contra="Inversor2";
         boolean bloqueadoInversor2=false;
@@ -31,6 +35,7 @@ public class FernanStarter {
                 if(contraPedido.equals(contraAdministrador)){
                     System.out.println("Login realizado. Bienvenido "+usuarioAdministrador);
                     acceso=true;
+                    //Menu administrador
                     do {
                         System.out.println("1. Panel de control");
                         System.out.println("2. Proyectos");
@@ -38,15 +43,15 @@ public class FernanStarter {
                         System.out.println("4. Cerrar sesión");
                         opcionAdmi = sc.nextInt();
 
-                        do {
                             switch (opcionAdmi) {
                                 case 1:
+                                    do {
                                     System.out.println("Bienvenido al Panel de control que deseas");
                                     System.out.println("1.Bloquear");
                                     System.out.println("2.Desbloquear");
                                     System.out.println("3.Salir");
-                                    menuadmi = sc.nextInt();
-                                    switch (menuadmi) {
+                                        menubloq = sc.nextInt();
+                                    switch (menubloq) {
                                         case 1:
                                             System.out.println("A quien deseas bloquear " + usuarioGestor + ", " + inversor1 + ", " + inversor2);
                                             nombreUsuario = sc.next();
@@ -76,14 +81,45 @@ public class FernanStarter {
                                             }
                                             break;
                                         case 3:
-                                            System.out.println("Adios");
+                                            System.out.println("Saliste satisfactoriamente del Panel de control");
                                             break;
+                                        default:
+                                            System.out.println("Tienes que elegir una de las opciones");
                                     }
-                                    break;
+                                    }while (menubloq != 3);
 
+                                case 2:
+                                    System.out.println("Bienvenido a Proyectos que deseas");
+                                    break;
+                                case 3:
+                                    System.out.println("Bienvenido a la Configuración que deseas");
+
+                                    do {
+                                        System.out.println("1. Cambiar nombre de usuario");
+                                        System.out.println("2. Cambiar contraseña");
+                                        System.out.println("3. Salir");
+                                        menuconf = sc.nextInt();
+                                        switch (menuconf){
+                                            case 1:
+                                                System.out.println("Tu nombre actual es: " + usuarioAdministrador);
+                                                System.out.print("Pon tu nuevo nombre: ");
+                                                usuarioAdministrador = sc.next();
+                                                System.out.println("Cambiaste tu nombre a: " + usuarioAdministrador);
+                                                break;
+                                            case 2:
+                                                System.out.println("Tu contraseña actual es: " + contraAdministrador);
+                                                System.out.print("Pon tu nueva contraseña: ");
+                                                contraAdministrador = sc.next();
+                                                System.out.println("Cambiaste tu contraseña a: " + contraAdministrador);
+                                                break;
+                                            default:
+                                                System.out.println("Tienes que elegir una de las opciones");
+                                        }
+                                    }while (menuconf != 3);
+                                    break;
                             }
-                        } while (menuadmi != 3);
                     }while (opcionAdmi != 4);
+                    System.out.println("Cerraste sesion exitosamente");
                 }else{
                     System.out.println("Login fallido");
                 }
@@ -131,6 +167,5 @@ public class FernanStarter {
                 System.out.println("Número de intentos excedido (Estás bloqueado).");
             }
         }
-
     }
 }
