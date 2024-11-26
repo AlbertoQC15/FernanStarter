@@ -5,6 +5,7 @@ public class FernanStarter {
         Scanner sc = new Scanner(System.in);
     String usuarioAdministrador="Administrador";
     String contraAdministrador="1234";
+        int opcionAdmi = 0;
     String usuarioGestor="Gestor";
     String contraGestor="4321";
     boolean bloqueadoGestor=false;
@@ -27,9 +28,16 @@ public class FernanStarter {
                 if(contraPedido.equals(contraAdministrador)){
                     System.out.println("Login realizado. Bienvenido "+usuarioAdministrador);
                     acceso=true;
+                     opcionAdmi = sc.nextInt();
+                    System.out.println("1. Panel de control");
+                    System.out.println("2. Proyectos");
+                    System.out.println("3. Configuración");
+                    System.out.println("4. Cerrar sesión");
+                    switch (opcionAdmi){
+                            
+                    }
                 }else{
                     System.out.println("Login fallido");
-                    intentos++;
                 }
             }else if(usuarioPedido.equals(usuarioGestor)){
                 if(bloqueadoGestor){
@@ -72,7 +80,7 @@ public class FernanStarter {
                 intentos++;
             }
             if (intentos==3 && !acceso){
-                System.out.println("Número de intentos excedido.");
+                System.out.println("Número de intentos excedido (Estás bloqueado).");
             }
         }
 
