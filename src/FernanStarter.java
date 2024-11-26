@@ -19,6 +19,7 @@ public class FernanStarter {
         int opcionCrearProyecto1 =0;
         int opcionCrearProyecto2 =0;
         int opcionCrearProyecto3 =0;
+        int menuconfGestor=0;
         String nombreProyecto1 ="";
         String categoriaProyecto1="";
         String cantidadNecesariaProyecto1 ="";
@@ -247,11 +248,39 @@ public class FernanStarter {
                                                     System.out.println("Saliendo de Mis Proyectos.");
                                                     break;
                                             }
-                                        break;
+                                        case 2:
+                                            System.out.println("Saliendo de Mis proyectos.");
+                                            break;
                                     }
                                 }while (opcionCrearProyecto1 !=2);
+                            case 2:
+                                System.out.println("Bienvenido a la configuración.");
+                                do {
+                                    System.out.println("1. Cambiar nombre de usuario.");
+                                    System.out.println("2. Cambiar la contraseña de usuario.");
+                                    System.out.println("3. Salir,");
+                                    switch (menuconfGestor){
+                                        case 1:
+                                            System.out.println("Tu nombre actual es: " + usuarioGestor);
+                                            System.out.print("Pon tu nuevo nombre: ");
+                                            usuarioGestor = sc.next();
+                                            System.out.println("Cambiaste tu nombre a: " + usuarioAdministrador);
+                                            break;
+                                        case 2:
+                                            System.out.println("Tu contraseña actual es: " + contraGestor);
+                                            System.out.print("Pon tu nueva contraseña: ");
+                                            contraGestor = sc.next();
+                                            System.out.println("Cambiaste tu contraseña a: " + contraGestor);
+                                            break;
+                                        default:
+                                            System.out.println("Tienes que elegir una de las opciones");
+                                    }
+                                }while (menuconfGestor!=3);
+                                System.out.println("Cerraste sesion exitosamente");
+                                break;
                         }
-                    }while (acceso);
+                    }while (opcionGestor!=3);
+                    System.out.println("Cerraste sesion exitosamente");
                 }else {
                     System.out.println("Login fallido");
                     intentos++;
