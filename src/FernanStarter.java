@@ -267,7 +267,7 @@ public class FernanStarter {
                                             System.out.println("Tu nombre actual es: " + usuarioGestor);
                                             System.out.print("Pon tu nuevo nombre: ");
                                             usuarioGestor = sc.next();
-                                            System.out.println("Cambiaste tu nombre a: " + usuarioAdministrador);
+                                            System.out.println("Cambiaste tu nombre a: " + usuarioGestor);
                                             break;
                                         case 2:
                                             System.out.println("Tu contraseña actual es: " + contraGestor);
