@@ -237,12 +237,13 @@ public class FernanStarter {
                                                             System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
                                                                     + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
                                                                     + "\nRecompensas del proyecto: " + recompensasProyecto3);
+                                                            if (numerosProyectos==3){
+                                                                System.out.println("Has creado la cantidad máxima de proyectos.");
+                                                            }
                                                             break;
                                                         case 2:
-                                                            if (numerosProyectos == 3) {
-                                                                System.out.println("Saliendo de crear proyectos.");
-                                                                return;
-                                                            }
+                                                            System.out.println("Saliendo de Mis proyectos.");
+                                                            break;
                                                     }
                                                 case 2:
                                                     System.out.println("Saliendo de Mis Proyectos.");
@@ -253,12 +254,14 @@ public class FernanStarter {
                                             break;
                                     }
                                 }while (opcionCrearProyecto1 !=2);
+                                break;
                             case 2:
                                 System.out.println("Bienvenido a la configuración.");
                                 do {
                                     System.out.println("1. Cambiar nombre de usuario.");
                                     System.out.println("2. Cambiar la contraseña de usuario.");
-                                    System.out.println("3. Salir,");
+                                    System.out.println("3. Salir.");
+                                    menuconfGestor= sc.nextInt();
                                     switch (menuconfGestor){
                                         case 1:
                                             System.out.println("Tu nombre actual es: " + usuarioGestor);
@@ -273,14 +276,14 @@ public class FernanStarter {
                                             System.out.println("Cambiaste tu contraseña a: " + contraGestor);
                                             break;
                                         default:
-                                            System.out.println("Tienes que elegir una de las opciones");
+                                            System.out.println("Tienes que elegir una de las opciones.");
                                     }
                                 }while (menuconfGestor!=3);
-                                System.out.println("Cerraste sesion exitosamente");
+                                System.out.println("Saliendo de configuración.");
                                 break;
                         }
                     }while (opcionGestor!=3);
-                    System.out.println("Cerraste sesion exitosamente");
+                    System.out.println("Cerraste sesion exitosamente.");
                 }else {
                     System.out.println("Login fallido");
                     intentos++;
