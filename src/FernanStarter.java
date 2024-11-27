@@ -64,6 +64,7 @@ public class FernanStarter {
                     acceso=true;
                     //Menu administrador
                     do {
+                        System.out.println("-----Menú Administrador-----");
                         System.out.println("1. Panel de control");
                         System.out.println("2. Proyectos");
                         System.out.println("3. Configuración");
@@ -158,111 +159,99 @@ public class FernanStarter {
                     acceso=true;
                     //MENÚ GESTOR.
                     do {
+                        System.out.println("-----Menú Gestor-----");
                         System.out.println("1. Mis proyectos.");
                         System.out.println("2. Configuración.");
                         System.out.println("3. Cerrar sesión.");
-                        opcionGestor=sc.nextInt();
-                        switch (opcionGestor){
+                        opcionGestor = sc.nextInt();
+                        switch (opcionGestor) {
                             case 1:
                                 System.out.println("Bienvenido a Mis proyectos.");
                                 System.out.println("Puedes crear un máximo de 3 proyectos.");
-                                System.out.println("Tienes "+numerosProyectos+" creados.");
-                                System.out.println("¿Quieres crear algun proyecto (1 si, 2 no)?");
-                                opcionCrearProyecto1 = sc.nextInt();
-                                do {
-                                    switch (opcionCrearProyecto1){
-                                        case 1:
-                                            numerosProyectos++;
+                                System.out.println("Tienes " + numerosProyectos + " creados.");
+                                if (numerosProyectos<3){
+                                    System.out.println("¿Quieres crear algun proyecto (1 si, 2 no)?");
+                                    opcionCrearProyecto1 = sc.nextInt();
+                                    while (opcionCrearProyecto1 ==1 && numerosProyectos<3) {
+                                        numerosProyectos++;
+                                        if (numerosProyectos==1) {
                                             System.out.println("Dime el nombre del proyecto:");
                                             nombreProyecto1 = sc.next();
                                             System.out.println("Dime la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…)");
-                                            categoriaProyecto1= sc.next();
+                                            categoriaProyecto1 = sc.next();
                                             System.out.println("Cantidad necesaria del proyecto.");
-                                            cantidadNecesariaProyecto1= sc.next();
+                                            cantidadNecesariaProyecto1 = sc.next();
                                             System.out.println("Cantidad financiada del proyecto.");
-                                            cantidadFinanciadaProyecto1= sc.next();
+                                            cantidadFinanciadaProyecto1 = sc.next();
                                             System.out.println("Fecha inicio apertura del proyecto.");
-                                            fechaInicioProyecto1= sc.next();
+                                            fechaInicioProyecto1 = sc.next();
                                             System.out.println("Fecha fin apertura del proyecto.");
-                                            fechaFinProyecto1= sc.next();
+                                            fechaFinProyecto1 = sc.next();
                                             System.out.println("Recompensas del proyecto.");
-                                            recompensasProyecto1= sc.next();
-                                            System.out.println("PROYECTO "+numerosProyectos+".");
-                                            System.out.println("Nombre: "+nombreProyecto1+"\nCategoria: "+categoriaProyecto1+"\nCantidad necesaria: "+cantidadNecesariaProyecto1
-                                            +" \nCantidad financiada: "+cantidadFinanciadaProyecto1+ " \nFecha inicio proyecto: "+fechaInicioProyecto1+" \nFecha fin proyecto: "+fechaFinProyecto1
-                                            +"\nRecompensas del proyecto: "+recompensasProyecto1);
-                                            System.out.println("¿Quieres crear otro proyecto (1 si, 2 no)?");
-                                            opcionCrearProyecto2 = sc.nextInt();
-                                            switch (opcionCrearProyecto2) {
-                                                case 1:
-                                                    numerosProyectos++;
-                                                    System.out.println("Dime el nombre del proyecto:");
-                                                    nombreProyecto2 = sc.next();
-                                                    System.out.println("Dime la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…)");
-                                                    categoriaProyecto2 = sc.next();
-                                                    System.out.println("Cantidad necesaria del proyecto.");
-                                                    cantidadNecesariaProyecto2 = sc.next();
-                                                    System.out.println("Cantidad financiada del proyecto.");
-                                                    cantidadFinanciadaProyecto2 = sc.next();
-                                                    System.out.println("Fecha inicio apertura del proyecto.");
-                                                    fechaInicioProyecto2 = sc.next();
-                                                    System.out.println("Fecha fin apertura del proyecto.");
-                                                    fechaFinProyecto2 = sc.next();
-                                                    System.out.println("Recompensas del proyecto.");
-                                                    recompensasProyecto2 = sc.next();
-                                                    System.out.println("PROYECTO " + numerosProyectos + ".");
-                                                    System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
-                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
-                                                            + "\nRecompensas del proyecto: " + recompensasProyecto2);
-                                                    System.out.println("¿Quieres crear otro proyecto (1 si, 2 no)?");
-                                                    opcionCrearProyecto3 = sc.nextInt();
-                                                    switch (opcionCrearProyecto3) {
-                                                        case 1:
-                                                            numerosProyectos++;
-                                                            System.out.println("Dime el nombre del proyecto:");
-                                                            nombreProyecto3 = sc.next();
-                                                            System.out.println("Dime la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…)");
-                                                            categoriaProyecto3 = sc.next();
-                                                            System.out.println("Cantidad necesaria del proyecto.");
-                                                            cantidadNecesariaProyecto3 = sc.next();
-                                                            System.out.println("Cantidad financiada del proyecto.");
-                                                            cantidadFinanciadaProyecto3 = sc.next();
-                                                            System.out.println("Fecha inicio apertura del proyecto.");
-                                                            fechaInicioProyecto3 = sc.next();
-                                                            System.out.println("Fecha fin apertura del proyecto.");
-                                                            fechaFinProyecto3 = sc.next();
-                                                            System.out.println("Recompensas del proyecto.");
-                                                            recompensasProyecto3 = sc.next();
-                                                            System.out.println("PROYECTO " + numerosProyectos + ".");
-                                                            System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
-                                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
-                                                                    + "\nRecompensas del proyecto: " + recompensasProyecto3);
-                                                            if (numerosProyectos==3){
-                                                                System.out.println("Has creado la cantidad máxima de proyectos.");
-                                                            }
-                                                            break;
-                                                        case 2:
-                                                            System.out.println("Saliendo de Mis proyectos.");
-                                                            break;
-                                                    }
-                                                case 2:
-                                                    System.out.println("Saliendo de Mis Proyectos.");
-                                                    break;
-                                            }
-                                        case 2:
-                                            System.out.println("Saliendo de Mis proyectos.");
+                                            recompensasProyecto1 = sc.next();
+                                            System.out.println("PROYECTO " + numerosProyectos + ".");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                        } else if (numerosProyectos==2) {
+                                            System.out.println("Dime el nombre del proyecto:");
+                                            nombreProyecto2 = sc.next();
+                                            System.out.println("Dime la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…)");
+                                            categoriaProyecto2 = sc.next();
+                                            System.out.println("Cantidad necesaria del proyecto.");
+                                            cantidadNecesariaProyecto2 = sc.next();
+                                            System.out.println("Cantidad financiada del proyecto.");
+                                            cantidadFinanciadaProyecto2 = sc.next();
+                                            System.out.println("Fecha inicio apertura del proyecto.");
+                                            fechaInicioProyecto2 = sc.next();
+                                            System.out.println("Fecha fin apertura del proyecto.");
+                                            fechaFinProyecto2 = sc.next();
+                                            System.out.println("Recompensas del proyecto.");
+                                            recompensasProyecto2 = sc.next();
+                                            System.out.println("PROYECTO " + numerosProyectos + ".");
+                                            System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                        } else if (numerosProyectos==3) {
+                                            System.out.println("Dime el nombre del proyecto:");
+                                            nombreProyecto3 = sc.next();
+                                            System.out.println("Dime la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…)");
+                                            categoriaProyecto3 = sc.next();
+                                            System.out.println("Cantidad necesaria del proyecto.");
+                                            cantidadNecesariaProyecto3 = sc.next();
+                                            System.out.println("Cantidad financiada del proyecto.");
+                                            cantidadFinanciadaProyecto3 = sc.next();
+                                            System.out.println("Fecha inicio apertura del proyecto.");
+                                            fechaInicioProyecto3 = sc.next();
+                                            System.out.println("Fecha fin apertura del proyecto.");
+                                            fechaFinProyecto3 = sc.next();
+                                            System.out.println("Recompensas del proyecto.");
+                                            recompensasProyecto3 = sc.next();
+                                            System.out.println("PROYECTO " + numerosProyectos + ".");
+                                            System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto3);
+                                        }
+                                        if (numerosProyectos<3){
+                                            System.out.println("¿Quieres crear algun proyecto (1 si, 2 no)?");
+                                            opcionCrearProyecto1= sc.nextInt();
+                                        }else {
                                             break;
+                                        }
                                     }
-                                }while (opcionCrearProyecto1 !=2);
-                                break;
+                                }else {
+                                    System.out.println("Cantidad máxima de proyectos creados.");
+                                }
+                                System.out.println("Saliendo de Mis Proyectos.");
+                                    break;
                             case 2:
                                 System.out.println("Bienvenido a la configuración.");
                                 do {
                                     System.out.println("1. Cambiar nombre de usuario.");
                                     System.out.println("2. Cambiar la contraseña de usuario.");
                                     System.out.println("3. Salir.");
-                                    menuconfGestor= sc.nextInt();
-                                    switch (menuconfGestor){
+                                    menuconfGestor = sc.nextInt();
+                                    switch (menuconfGestor) {
                                         case 1:
                                             System.out.println("Tu nombre actual es: " + usuarioGestor);
                                             System.out.print("Pon tu nuevo nombre: ");
@@ -278,11 +267,11 @@ public class FernanStarter {
                                         default:
                                             System.out.println("Tienes que elegir una de las opciones.");
                                     }
-                                }while (menuconfGestor!=3);
+                                } while (menuconfGestor != 3);
                                 System.out.println("Saliendo de configuración.");
                                 break;
                         }
-                    }while (opcionGestor!=3);
+                    }while (opcionGestor != 3) ;
                     System.out.println("Cerraste sesion exitosamente.");
                 }else {
                     System.out.println("Login fallido");
