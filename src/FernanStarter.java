@@ -22,22 +22,22 @@ public class FernanStarter {
         int menuconfGestor=0;
         String nombreProyecto1 ="";
         String categoriaProyecto1="";
-        float cantidadNecesariaProyecto1;
-        float cantidadFinanciadaProyecto1;
+        float  cantidadNecesariaProyecto1=0;
+        float cantidadFinanciadaProyecto1=0;
         String fechaInicioProyecto1 ="";
         String fechaFinProyecto1 ="";
         String recompensasProyecto1 ="";
         String nombreProyecto2 ="";
         String categoriaProyecto2="";
-        float cantidadNecesariaProyecto2;
-        float cantidadFinanciadaProyecto2;
+        float cantidadNecesariaProyecto2=0;
+        float cantidadFinanciadaProyecto2=0;
         String fechaInicioProyecto2 ="";
         String fechaFinProyecto2 ="";
         String recompensasProyecto2 ="";
         String nombreProyecto3 ="";
         String categoriaProyecto3="";
-        float cantidadNecesariaProyecto3;
-        float cantidadFinanciadaProyecto3;
+        float cantidadNecesariaProyecto3=0;
+        float cantidadFinanciadaProyecto3=0;
         String fechaInicioProyecto3 ="";
         String fechaFinProyecto3 ="";
         String recompensasProyecto3 ="";
@@ -161,8 +161,9 @@ public class FernanStarter {
                     do {
                         System.out.println("-----Menú Gestor-----");
                         System.out.println("1. Mis proyectos.");
-                        System.out.println("2. Configuración.");
-                        System.out.println("3. Cerrar sesión.");
+                        System.out.println("2. Vista detallada de los proyectos.");
+                        System.out.println("3. Configuración.");
+                        System.out.println("4. Cerrar sesión.");
                         opcionGestor = sc.nextInt();
                         switch (opcionGestor) {
                             case 1:
@@ -245,6 +246,45 @@ public class FernanStarter {
                                 System.out.println("Saliendo de Mis Proyectos.");
                                     break;
                             case 2:
+                                if (numerosProyectos==0){
+                                    System.out.println("Tienes que crear un proyecto antes.");
+                                    break;
+                                } else if (numerosProyectos==1) {
+                                    System.out.println("-----PROYECTO 1-----");
+                                    System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                            + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                    break;
+                                } else if (numerosProyectos==2) {
+                                    System.out.println("-----PROYECTO 1-----");
+                                    System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                            + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                    System.out.println();
+                                    System.out.println("-----PROYECTO 2-----");
+                                    System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                            + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                    break;
+                                } else if (numerosProyectos==3) {
+                                    System.out.println("-----PROYECTO 1-----");
+                                    System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                            + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                    System.out.println();
+                                    System.out.println("-----PROYECTO 2-----");
+                                    System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                            + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                    System.out.println();
+                                    System.out.println("-----PROYECTO 3-----");
+                                    System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
+                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
+                                            + "\nRecompensas del proyecto: " + recompensasProyecto3);
+                                    break;
+                                }
+
+                            case 3:
                                 System.out.println("Bienvenido a la configuración.");
                                 do {
                                     System.out.println("1. Cambiar nombre de usuario.");
@@ -271,7 +311,7 @@ public class FernanStarter {
                                 System.out.println("Saliendo de configuración.");
                                 break;
                         }
-                    }while (opcionGestor != 3) ;
+                    }while (opcionGestor != 4) ;
                     System.out.println("Cerraste sesion exitosamente.");
                 }else {
                     System.out.println("Login fallido");
