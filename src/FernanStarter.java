@@ -154,33 +154,69 @@ public class FernanStarter {
                                                         System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
                                                                 + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                                 + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                        System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                                        float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                        for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                            System.out.print("█");
+                                                        }
+                                                        System.out.printf(" %.1f\n", porcentajeProyecto1);
                                                         break;
                                                     } else if (numerosProyectos == 2) {
                                                         System.out.println("-----PROYECTO 1-----");
                                                         System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
                                                                 + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                                 + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                        System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                                        float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                        for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                            System.out.print("█");
+                                                        }
+                                                        System.out.printf(" %.1f\n", porcentajeProyecto1);
                                                         System.out.println();
                                                         System.out.println("-----PROYECTO 2-----");
                                                         System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
                                                                 + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
                                                                 + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                                        System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                                        float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                                        for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                            System.out.print("█");
+                                                        }
+                                                        System.out.printf(" %.1f\n", porcentajeProyecto2);
                                                         break;
                                                     } else if (numerosProyectos == 3) {
                                                         System.out.println("-----PROYECTO 1-----");
                                                         System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
                                                                 + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                                 + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                        System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                                        float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                        for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                            System.out.print("█");
+                                                        }
+                                                        System.out.printf(" %.1f\n", porcentajeProyecto1);
                                                         System.out.println();
                                                         System.out.println("-----PROYECTO 2-----");
                                                         System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
                                                                 + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
                                                                 + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                                        System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                                        float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                                        for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                            System.out.print("█");
+                                                        }
+                                                        System.out.printf(" %.1f\n", porcentajeProyecto2);
                                                         System.out.println();
                                                         System.out.println("-----PROYECTO 3-----");
                                                         System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
                                                                 + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
                                                                 + "\nRecompensas del proyecto: " + recompensasProyecto3);
+                                                        float porcentajeProyecto3=(cantidadFinanciadaProyecto3/cantidadNecesariaProyecto3)*100;
+                                                        System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 3.*******");
+                                                        for (int i = 0; i <porcentajeProyecto3 ; i+=2) {
+                                                            System.out.print("█");
+                                                        }
+                                                        System.out.printf(" %.1f\n", porcentajeProyecto3);
                                                         break;
                                                     }
                                                     break;
@@ -779,33 +815,69 @@ public class FernanStarter {
                                             System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
                                                     + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                            float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                            for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto1);
                                             break;
                                         } else if (numerosProyectos == 2) {
                                             System.out.println("-----PROYECTO 1-----");
                                             System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
                                                     + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                            float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                            for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto1);
                                             System.out.println();
                                             System.out.println("-----PROYECTO 2-----");
                                             System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
                                                     + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                            float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                            for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto2);
                                             break;
                                         } else if (numerosProyectos == 3) {
                                             System.out.println("-----PROYECTO 1-----");
                                             System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
                                                     + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                            float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                            for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto1);
                                             System.out.println();
                                             System.out.println("-----PROYECTO 2-----");
                                             System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
                                                     + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                            float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                            for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto2);
                                             System.out.println();
                                             System.out.println("-----PROYECTO 3-----");
                                             System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
                                                     + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto3);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 3.*******");
+                                            float porcentajeProyecto3=(cantidadFinanciadaProyecto3/cantidadNecesariaProyecto3)*100;
+                                            for (int i = 0; i <porcentajeProyecto3 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto3);
                                             break;
                                         }
                                     case 3:
