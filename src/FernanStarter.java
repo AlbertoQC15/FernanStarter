@@ -192,12 +192,12 @@ public class FernanStarter {
                                                         System.out.println("-----------------------------------------------");
                                                         System.out.println("Hay " + numerosProyectos + " disponibles");
                                                         System.out.println("¿Que proyecto deseas modificar o eliminar?");
-                                                        System.out.println("Pulsa 4 para Salir");
+                                                        System.out.println("Pulsa 1 para modificar o 4 para Salir");
                                                         System.out.println("-----------------------------------------------");
                                                         modificarProyec = sc.nextInt();
                                                         switch (modificarProyec){
                                                             case 1 :
-                                                                System.out.println("Deseas eliminar o modificar el nombre del proyecto:");
+                                                                System.out.println("Deseas eliminar o modificar el nombre del proyecto: "+nombreProyecto1);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -217,7 +217,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…)");
+                                                                System.out.println("Deseas eliminar o modificar la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…) "+categoriaProyecto1);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -237,7 +237,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar cantidad necesaria del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar cantidad necesaria del proyecto. "+cantidadNecesariaProyecto1);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -257,7 +257,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar cantidad financiada del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar cantidad financiada del proyecto. "+cantidadFinanciadaProyecto1);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -277,7 +277,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar fecha inicio apertura del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar fecha inicio apertura del proyecto. "+fechaInicioProyecto1);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -297,7 +297,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto. "+fechaInicioProyecto2);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -317,7 +317,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto. " +recompensasProyecto1);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -343,7 +343,7 @@ public class FernanStarter {
                                                                         + "\nRecompensas del proyecto: " + recompensasProyecto1);
                                                                 break;
                                                             case 2 :
-                                                                System.out.println("Deseas eliminar o modificar el nombre del proyecto:");
+                                                                System.out.println("Deseas eliminar o modificar el nombre del proyecto: "+nombreProyecto2);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -363,7 +363,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…)");
+                                                                System.out.println("Deseas eliminar o modificar la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…) "+categoriaProyecto2);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -383,7 +383,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar cantidad necesaria del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar cantidad necesaria del proyecto. "+cantidadNecesariaProyecto2);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -403,7 +403,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar cantidad financiada del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar cantidad financiada del proyecto. "+cantidadFinanciadaProyecto2);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -423,7 +423,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar fecha inicio apertura del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar fecha inicio apertura del proyecto. "+fechaInicioProyecto2);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -443,7 +443,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto. "+fechaFinProyecto2);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -463,7 +463,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto2);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -489,7 +489,7 @@ public class FernanStarter {
                                                                         + "\nRecompensas del proyecto: " + recompensasProyecto2);
                                                                 break;
                                                             case 3 :
-                                                                System.out.println("Deseas eliminar o modificar el nombre del proyecto:");
+                                                                System.out.println("Deseas eliminar o modificar el nombre del proyecto: "+nombreProyecto3);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -509,7 +509,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…)");
+                                                                System.out.println("Deseas eliminar o modificar la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…) "+categoriaProyecto3);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -529,7 +529,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar cantidad necesaria del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar cantidad necesaria del proyecto. "+cantidadNecesariaProyecto3);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -549,7 +549,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar cantidad financiada del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar cantidad financiada del proyecto. "+cantidadFinanciadaProyecto3);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -569,7 +569,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar fecha inicio apertura del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar fecha inicio apertura del proyecto. "+fechaInicioProyecto3);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -589,7 +589,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto. "+fechaFinProyecto3);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -609,7 +609,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto.");
+                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto3);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -686,8 +686,9 @@ public class FernanStarter {
                                 System.out.println("-----Menú Gestor-----");
                                 System.out.println("1. Mis proyectos.");
                                 System.out.println("2. Vista detallada de los proyectos.");
-                                System.out.println("3. Configuración.");
-                                System.out.println("4. Cerrar sesión.");
+                                System.out.println("3. Modificar o eliminar datos de los proyectos.");
+                                System.out.println("4. Configuración.");
+                                System.out.println("5. Cerrar sesión.");
                                 opcionGestor = sc.nextInt();
                                 switch (opcionGestor) {
                                     case 1:
@@ -807,8 +808,459 @@ public class FernanStarter {
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto3);
                                             break;
                                         }
-
                                     case 3:
+                                        if (numerosProyectos == 0) {
+                                            System.out.println("No hay proyectos disponibles.");
+                                            break;
+                                        } else{
+                                            System.out.println("-----------------------------------------------");
+                                            System.out.println("Hay " + numerosProyectos + " disponibles");
+                                            System.out.println("¿Que proyecto deseas modificar o eliminar?");
+                                            System.out.println("Pulsa 1 para modificarlos pulsa 4 para Salir");
+                                            System.out.println("-----------------------------------------------");
+                                            modificarProyec = sc.nextInt();
+                                            switch (modificarProyec){
+                                                case 1 :
+                                                    System.out.println("Deseas eliminar o modificar el nombre del proyecto: "+nombreProyecto1);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarModificar = sc.nextInt();
+                                                    switch (eliminarModificar){
+                                                        case 1 :
+                                                            System.out.println("Nuevo nombre del proyecto");
+                                                            nombreProyecto1 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            nombreProyecto1 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…) "+categoriaProyecto1);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarCategoria = sc.nextInt();
+                                                    switch (eliminarCategoria){
+                                                        case 1 :
+                                                            System.out.println("Nueva categoria del proyecto");
+                                                            categoriaProyecto1 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            categoriaProyecto1 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar cantidad necesaria del proyecto. "+cantidadNecesariaProyecto1);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarCantidadNe = sc.nextInt();
+                                                    switch (eliminarCantidadNe){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad necesaria del proyecto.");
+                                                            cantidadNecesariaProyecto1 = sc.nextFloat();
+                                                            break;
+                                                        case 2 :
+                                                            cantidadNecesariaProyecto1 = 0;
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar cantidad financiada del proyecto. "+cantidadFinanciadaProyecto1);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarCantidadFi = sc.nextInt();
+                                                    switch (eliminarCantidadFi){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad necesaria del proyecto.");
+                                                            cantidadFinanciadaProyecto1 = sc.nextFloat();
+                                                            break;
+                                                        case 2 :
+                                                            cantidadFinanciadaProyecto1 = 0;
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar fecha inicio apertura del proyecto."+ fechaInicioProyecto1);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarFechaIn = sc.nextInt();
+                                                    switch (eliminarFechaIn){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            fechaInicioProyecto1 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            fechaInicioProyecto1 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto. "+fechaFinProyecto1);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarFechaFin = sc.nextInt();
+                                                    switch (eliminarFechaFin){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            fechaFinProyecto1 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            fechaFinProyecto1 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto1);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarrecompensas = sc.nextInt();
+                                                    switch (eliminarrecompensas){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            recompensasProyecto1 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            recompensasProyecto1 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("PROYECTO " + numerosProyectos + ".");
+                                                    System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                    break;
+                                                case 2 :
+                                                    System.out.println("Deseas eliminar o modificar el nombre del proyecto: "+nombreProyecto2);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarModificar = sc.nextInt();
+                                                    switch (eliminarModificar){
+                                                        case 1 :
+                                                            System.out.println("Nuevo nombre del proyecto");
+                                                            nombreProyecto2 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            nombreProyecto2 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…) "+categoriaProyecto2);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarCategoria = sc.nextInt();
+                                                    switch (eliminarCategoria){
+                                                        case 1 :
+                                                            System.out.println("Nueva categoria del proyecto");
+                                                            categoriaProyecto2 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            categoriaProyecto2 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar cantidad necesaria del proyecto. "+cantidadNecesariaProyecto2);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarCantidadNe = sc.nextInt();
+                                                    switch (eliminarCantidadNe){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad necesaria del proyecto.");
+                                                            cantidadNecesariaProyecto2 = sc.nextFloat();
+                                                            break;
+                                                        case 2 :
+                                                            cantidadNecesariaProyecto2 = 0;
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar cantidad financiada del proyecto. "+cantidadFinanciadaProyecto2);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarCantidadFi = sc.nextInt();
+                                                    switch (eliminarCantidadFi){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad necesaria del proyecto.");
+                                                            cantidadFinanciadaProyecto2 = sc.nextFloat();
+                                                            break;
+                                                        case 2 :
+                                                            cantidadFinanciadaProyecto2 = 0;
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar fecha inicio apertura del proyecto. "+fechaInicioProyecto2);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarFechaIn = sc.nextInt();
+                                                    switch (eliminarFechaIn){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            fechaInicioProyecto2 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            fechaInicioProyecto2 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto. "+fechaFinProyecto2);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarFechaFin = sc.nextInt();
+                                                    switch (eliminarFechaFin){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            fechaFinProyecto2 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            fechaFinProyecto2 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto2);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarrecompensas = sc.nextInt();
+                                                    switch (eliminarrecompensas){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            recompensasProyecto2 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            recompensasProyecto2 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("PROYECTO " + numerosProyectos + ".");
+                                                    System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                                    break;
+                                                case 3 :
+                                                    System.out.println("Deseas eliminar o modificar el nombre del proyecto: "+nombreProyecto3);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarModificar = sc.nextInt();
+                                                    switch (eliminarModificar){
+                                                        case 1 :
+                                                            System.out.println("Nuevo nombre del proyecto");
+                                                            nombreProyecto3 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            nombreProyecto3 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar la categoria del proyecto (arte, tecnología, cine, música, juegos, comida, moda…) "+categoriaProyecto3);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarCategoria = sc.nextInt();
+                                                    switch (eliminarCategoria){
+                                                        case 1 :
+                                                            System.out.println("Nueva categoria del proyecto");
+                                                            categoriaProyecto3 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            categoriaProyecto3 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar cantidad necesaria del proyecto. "+cantidadNecesariaProyecto3);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarCantidadNe = sc.nextInt();
+                                                    switch (eliminarCantidadNe){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad necesaria del proyecto.");
+                                                            cantidadNecesariaProyecto3 = sc.nextFloat();
+                                                            break;
+                                                        case 2 :
+                                                            cantidadNecesariaProyecto3 = 0;
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar cantidad financiada del proyecto. "+cantidadFinanciadaProyecto3);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarCantidadFi = sc.nextInt();
+                                                    switch (eliminarCantidadFi){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad necesaria del proyecto.");
+                                                            cantidadFinanciadaProyecto3 = sc.nextFloat();
+                                                            break;
+                                                        case 2 :
+                                                            cantidadFinanciadaProyecto3 = 0;
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar fecha inicio apertura del proyecto. "+fechaInicioProyecto3);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarFechaIn = sc.nextInt();
+                                                    switch (eliminarFechaIn){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            fechaInicioProyecto3 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            fechaInicioProyecto3 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto. "+fechaFinProyecto3);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarFechaFin = sc.nextInt();
+                                                    switch (eliminarFechaFin){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            fechaFinProyecto3 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            fechaFinProyecto3 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto3);
+                                                    System.out.println("1. Modificar");
+                                                    System.out.println("2. Eliminar");
+                                                    System.out.println("3. Salir");
+                                                    eliminarrecompensas = sc.nextInt();
+                                                    switch (eliminarrecompensas){
+                                                        case 1 :
+                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            recompensasProyecto3 = sc.next();
+                                                            break;
+                                                        case 2 :
+                                                            recompensasProyecto3 = "";
+                                                            break;
+                                                        case 3 :
+                                                            System.out.println("Saliste exitosamente.");
+                                                            break;
+                                                        default:
+                                                            System.out.println("Tienes que meter una de las opciones");
+                                                            break;
+                                                    }
+                                                    System.out.println("PROYECTO " + numerosProyectos + ".");
+                                                    System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto3);
+                                                    break;
+                                            }
+                                        }
+                                    case 4:
                                         System.out.println("Bienvenido a la configuración.");
                                         do {
                                             System.out.println("1. Cambiar nombre de usuario.");
@@ -835,7 +1287,7 @@ public class FernanStarter {
                                         System.out.println("Saliendo de configuración.");
 
                                 }
-                            } while (opcionGestor != 4);
+                            } while (opcionGestor != 5);
                             System.out.println("Cerraste sesion exitosamente.");
                             acceso=false;
                             break;
