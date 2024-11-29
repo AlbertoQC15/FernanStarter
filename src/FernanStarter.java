@@ -63,6 +63,10 @@ public class FernanStarter {
     int inversionProyecto1Inversor1=0;
     int inversionProyecto2Inversor1=0;
     int inversionProyecto3Inversor1=0;
+    int menuInvertirProyectos=0;
+    int cantidadInvertidaProyecto1=0;
+    int cantidadInvertidaProyecto2=0;
+    int cantidadInvertidaProyecto3=0;
         boolean bloqueadoInversor1=false;
     //UsuarioInversor2
     String inversor2="Inversor2";
@@ -1892,7 +1896,9 @@ public class FernanStarter {
                                     case 3:
                                         System.out.println("Bienvenido a tu cartera digital.");
                                         System.out.println("Tu saldo actual es de "+saldoActualInversor1+"€");
-                                        System.out.println("Si quieres añadir saldo a tu cartera seleccione 1 y para salir seleccione 2.");
+                                        System.out.println("1. Añadir saldo.");
+                                        System.out.println("2. Invertir en los proyectos.");
+                                        System.out.println("3. Salir.");
                                         opcionSaldoCarteraInversor1=sc.nextInt();
                                         switch (opcionSaldoCarteraInversor1) {
                                             case 1:
@@ -1914,17 +1920,124 @@ public class FernanStarter {
                                                                 System.out.println("El saldo no se ha podido añadir, no se admiten números negativos");
                                                                 break;
                                                             }
-                                                        case 2:
-                                                            break;
                                                     }
                                                 }while (opcionSeguirAnadiendoDineroInversor1!=2);
+                                                System.out.println("Saliendo de la opcion añadir saldo");
                                                 break;
                                             case 2:
+                                                    if (numerosProyectos==0){
+                                                        System.out.println("No hay ningún proyecto para invertir.");
+                                                    }else if (numerosProyectos==1) {
+                                                        System.out.println("¿En qué proyecto quieres invertir?");
+                                                        System.out.println("1. Invertir en el proyecto 1.");
+                                                        System.out.println("2. Salir.");
+                                                        menuInvertirProyectos = sc.nextInt();
+                                                        switch (menuInvertirProyectos) {
+                                                            case 1:
+                                                                if (saldoActualInversor1 <= 0) {
+                                                                    System.out.println("No tienes saldo en la cartera.");
+                                                                    break;
+                                                                } else if (saldoActualInversor1 > cantidadNecesariaProyecto1 || saldoActualInversor1 < cantidadNecesariaProyecto1 || saldoActualInversor1==cantidadNecesariaProyecto1) {
+                                                                    System.out.println("¿Cuánto quieres invertir?");
+                                                                    inversionProyecto1Inversor1 = sc.nextInt();
+                                                                    System.out.println("Has invertido " + inversionProyecto1Inversor1 + "€");
+                                                                    inversionProyecto1Inversor1 += cantidadFinanciadaProyecto1;
+                                                                    saldoActualInversor1 -= inversionProyecto1Inversor1;
+                                                                    break;
+                                                                }
+                                                            case 2:
+                                                                System.out.println("Saliendo de invertir proyectos.");
+                                                                break;
+                                                        }
+                                                    } else if (numerosProyectos==2) {
+                                                        System.out.println("¿En qué proyecto quieres invertir?");
+                                                        System.out.println("1. Invertir en el proyecto 1.");
+                                                        System.out.println("2. Invertir en el proyecto 2.");
+                                                        System.out.println("3. Salir.");
+                                                        menuInvertirProyectos = sc.nextInt();
+                                                        switch (menuInvertirProyectos) {
+                                                            case 1:
+                                                                if (saldoActualInversor1 <= 0) {
+                                                                    System.out.println("No tienes saldo en la cartera.");
+                                                                    break;
+                                                                } else if (saldoActualInversor1 > cantidadNecesariaProyecto1 || saldoActualInversor1 < cantidadNecesariaProyecto1 ||saldoActualInversor1==cantidadNecesariaProyecto1) {
+                                                                    System.out.println("¿Cuánto quieres invertir?");
+                                                                    inversionProyecto1Inversor1 = sc.nextInt();
+                                                                    System.out.println("Has invertido " + inversionProyecto1Inversor1 + "€");
+                                                                    inversionProyecto1Inversor1 += cantidadFinanciadaProyecto1;
+                                                                    saldoActualInversor1 -= inversionProyecto1Inversor1;
+                                                                    break;
+                                                                }
+                                                            case 2:
+                                                                if (saldoActualInversor1 <= 0) {
+                                                                    System.out.println("No tienes saldo en la cartera.");
+                                                                    break;
+                                                                } else if (saldoActualInversor1 > cantidadNecesariaProyecto2 || saldoActualInversor1 < cantidadNecesariaProyecto2||saldoActualInversor1==cantidadFinanciadaProyecto2) {
+                                                                    System.out.println("¿Cuánto quieres invertir?");
+                                                                    inversionProyecto2Inversor1 = sc.nextInt();
+                                                                    System.out.println("Has invertido " + inversionProyecto1Inversor1 + "€");
+                                                                    inversionProyecto2Inversor1 += cantidadFinanciadaProyecto2;
+                                                                    saldoActualInversor1 -= inversionProyecto2Inversor1;
+                                                                    break;
+                                                                }
+                                                            case 3:
+                                                                System.out.println("Saliendo de invertir proyectos.");
+                                                                break;
+                                                        }
+                                                    } else if (numerosProyectos==3) {
+                                                        System.out.println("¿En qué proyecto quieres invertir?");
+                                                        System.out.println("1. Invertir en el proyecto 1.");
+                                                        System.out.println("2. Invertir en el proyecto 2.");
+                                                        System.out.println("3. Invertir en el proyecto 3.");
+                                                        System.out.println("4. Salir.");
+                                                        menuInvertirProyectos = sc.nextInt();
+                                                        switch (menuInvertirProyectos) {
+                                                            case 1:
+                                                                if (saldoActualInversor1 <= 0) {
+                                                                    System.out.println("No tienes saldo en la cartera.");
+                                                                    break;
+                                                                } else if (saldoActualInversor1 > cantidadNecesariaProyecto1 || saldoActualInversor1 < cantidadNecesariaProyecto1||saldoActualInversor1==cantidadNecesariaProyecto1) {
+                                                                    System.out.println("¿Cuánto quieres invertir?");
+                                                                    inversionProyecto1Inversor1 = sc.nextInt();
+                                                                    System.out.println("Has invertido " + inversionProyecto1Inversor1 + "€");
+                                                                    inversionProyecto1Inversor1 += cantidadFinanciadaProyecto1;
+                                                                    saldoActualInversor1 -= inversionProyecto1Inversor1;
+                                                                    break;
+                                                                }
+                                                            case 2:
+                                                                if (saldoActualInversor1 <= 0) {
+                                                                    System.out.println("No tienes saldo en la cartera.");
+                                                                    break;
+                                                                } else if (saldoActualInversor1 > cantidadNecesariaProyecto2 || saldoActualInversor1 < cantidadNecesariaProyecto2||saldoActualInversor1==cantidadNecesariaProyecto2) {
+                                                                    System.out.println("¿Cuánto quieres invertir?");
+                                                                    inversionProyecto2Inversor1 = sc.nextInt();
+                                                                    System.out.println("Has invertido " + inversionProyecto2Inversor1 + "€");
+                                                                    inversionProyecto2Inversor1 += cantidadFinanciadaProyecto2;
+                                                                    saldoActualInversor1 -= inversionProyecto2Inversor1;
+                                                                    break;
+                                                                }
+                                                            case 3:
+                                                                if (saldoActualInversor1 <= 0) {
+                                                                    System.out.println("No tienes saldo en la cartera.");
+                                                                    break;
+                                                                } else if (saldoActualInversor1 > cantidadNecesariaProyecto3 || saldoActualInversor1 < cantidadNecesariaProyecto3||saldoActualInversor1==cantidadNecesariaProyecto3) {
+                                                                    System.out.println("¿Cuánto quieres invertir?");
+                                                                    inversionProyecto3Inversor1 = sc.nextInt();
+                                                                    System.out.println("Has invertido " + inversionProyecto3Inversor1 + "€");
+                                                                    inversionProyecto3Inversor1 += cantidadFinanciadaProyecto3;
+                                                                    saldoActualInversor1 -= inversionProyecto3Inversor1;
+                                                                    break;
+                                                                }
+                                                            case 4:
+                                                                System.out.println("Saliendo de invertir proyectos.");
+                                                                break;
+                                                        }
+                                                    }
+                                            case 3:
                                                 System.out.println("Saliendo de su cartera digital.");
                                                 break;
                                         }
                                         break;
-
                                     case 4:
                                         System.out.println("-----Menú de tus amigos-----");
                                     case 5:
@@ -1954,7 +2067,6 @@ public class FernanStarter {
                                         } while (menuConfInversor1 != 3);
                                         System.out.println("Saliendo de configuración.");
                                 }
-
                             }while (opcionInversor1 != 6);
                             System.out.println("Cerraste sesión.");
                             acceso=false;
