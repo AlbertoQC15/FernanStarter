@@ -58,6 +58,11 @@ public class FernanStarter {
     //UsuarioInversor1
     String inversor1="Inversor1";
     String inversorContra="Inversor1";
+    int opcionInversor1=0;
+    int saldoActualInversor1=0;
+    int opcionSaldoCarteraInversor1=0;
+    int opcionSeguirAnadiendoDineroInversor1=0;
+    int menuConfInversor1=0;
         boolean bloqueadoInversor1=false;
     //UsuarioInversor2
     String inversor2="Inversor2";
@@ -700,9 +705,11 @@ public class FernanStarter {
                                                     System.out.println("Cambiaste tu contraseña a: " + contraAdministrador);
                                                     break;
                                                 default:
+                                                    if (menuconf>3 || menuconf<=0)
                                                     System.out.println("Tienes que elegir una de las opciones");
                                             }
                                         } while (menuconf != 3);
+                                        System.out.println("Saliendo de la configuración.");
                                         break;
                                 }
                             } while (opcionAdmi != 4);
@@ -1353,7 +1360,8 @@ public class FernanStarter {
                                                     System.out.println("Cambiaste tu contraseña a: " + contraGestor);
                                                     break;
                                                 default:
-                                                    System.out.println("Tienes que elegir una de las opciones.");
+                                                    if (menuconfGestor>3 || menuconfGestor<=0)
+                                                        System.out.println("Tienes que elegir una de las opciones");
                                             }
                                         } while (menuconfGestor != 3);
                                         System.out.println("Saliendo de configuración.");
@@ -1376,6 +1384,150 @@ public class FernanStarter {
                         } else if (contraPedido.equals(inversorContra)) {
                             System.out.println("Login realizado. Bienvenido " + inversor1);
                             acceso = true;
+                            //MENÚ INVERSOR 1
+                            do {
+                                System.out.println("------MENÚ INVERSOR 1------");
+                                System.out.println("1. Mis inversiones.");
+                                System.out.println("2. Proyectos.");
+                                System.out.println("3. Cartera digital.");
+                                System.out.println("4. Invitar a un amigo.");
+                                System.out.println("5. Configuración.");
+                                System.out.println("6. Cerrar sesión.");
+                                opcionInversor1 = sc.nextInt();
+                                switch (opcionInversor1) {
+                                    case 1:
+                                        System.out.println("Bienvenido a Mis Inversiones.");
+
+                                    case 2:
+                                        System.out.println("----Listado de los actuales proyectos creados-----");
+                                        if (numerosProyectos == 0) {
+                                            System.out.println("No hay proyectos creados actualmente.");
+                                            break;
+                                        } else if (numerosProyectos == 1) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                            float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                            for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                            break;
+                                        } else if (numerosProyectos == 2) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                            float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                            for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                            System.out.println();
+                                            System.out.println("-----PROYECTO 2-----");
+                                            System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                            float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                            for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto2);
+                                            break;
+                                        } else if (numerosProyectos == 3) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                            float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                            for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                            System.out.println();
+                                            System.out.println("-----PROYECTO 2-----");
+                                            System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                            float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                            for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto2);
+                                            System.out.println();
+                                            System.out.println("-----PROYECTO 3-----");
+                                            System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto3);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 3.*******");
+                                            float porcentajeProyecto3=(cantidadFinanciadaProyecto3/cantidadNecesariaProyecto3)*100;
+                                            for (int i = 0; i <porcentajeProyecto3 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto3);
+                                            break;
+                                        }
+                                    case 3:
+                                        System.out.println("Bienvenido a tu cartera digital.");
+                                        System.out.println("Tu saldo actual es de "+saldoActualInversor1+"€");
+                                        System.out.println("Si quieres añadir saldo a tu cartera seleccione 1 y para salir seleccione 2.");
+                                        opcionSaldoCarteraInversor1=sc.nextInt();
+                                        switch (opcionSaldoCarteraInversor1) {
+                                            case 1:
+                                                System.out.println("¿Cuánto quiere añadir a su cartera?");
+                                                saldoActualInversor1=sc.nextInt();
+                                                System.out.println("Actualmente tiene "+saldoActualInversor1+"€.");
+                                                System.out.println("¿Desea seguir añadiendo a su cartera?(1 Si 2 No)");
+                                                opcionSeguirAnadiendoDineroInversor1=sc.nextInt();
+                                                switch (opcionSeguirAnadiendoDineroInversor1){
+                                                    case 1:
+
+                                                    case 2:
+                                                        break;
+                                                }
+                                            case 2:
+                                                System.out.println("Saliendo de su cartera digital.");
+                                                break;
+                                        }
+                                    case 4:
+                                        System.out.println("-----Menú de tus amigos-----");
+                                    case 5:
+                                        System.out.println("Bienvenido a la configuración.");
+                                        do {
+                                            System.out.println("1. Cambiar nombre de usuario.");
+                                            System.out.println("2. Cambiar la contraseña de usuario.");
+                                            System.out.println("3. Salir.");
+                                            menuConfInversor1 = sc.nextInt();
+                                            switch (menuConfInversor1) {
+                                                case 1:
+                                                    System.out.println("Tu nombre actual es: " + inversor1);
+                                                    System.out.print("Pon tu nuevo nombre: ");
+                                                    inversor1 = sc.next();
+                                                    System.out.println("Cambiaste tu nombre a: " + inversor1);
+                                                    break;
+                                                case 2:
+                                                    System.out.println("Tu contraseña actual es: " + inversorContra);
+                                                    System.out.print("Pon tu nueva contraseña: ");
+                                                    inversorContra = sc.next();
+                                                    System.out.println("Cambiaste tu contraseña a: " + inversorContra);
+                                                    break;
+                                                default:
+                                                    if (menuConfInversor1>3 || menuConfInversor1<=0)
+                                                        System.out.println("Tienes que elegir una de las opciones");
+                                            }
+                                        } while (menuConfInversor1 != 3);
+                                        System.out.println("Saliendo de configuración.");
+                                }
+
+                            }while (opcionInversor1 != 6);
+                            System.out.println("Cerraste sesión.");
+                            acceso=false;
                         } else {
                             System.out.println("Login fallido");
                             intentos++;
@@ -1407,5 +1559,4 @@ public class FernanStarter {
     }while (inicioPrograma!=2);
         System.out.println("Saliendo del programa.");
         }
-
     }
