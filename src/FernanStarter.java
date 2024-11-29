@@ -11,47 +11,32 @@ public class FernanStarter {
     //Administrador
     String usuarioAdministrador="Administrador";
     String contraAdministrador="1234";
-        int opcionAdmi = 0;
-        int menubloq = 0;
-        int menuproyec = 0;
-        int menuconf = 0;
-        int modificarProyec = 0;
-        int eliminarModificar = 0;
-        int eliminarCategoria = 0;
-        int eliminarCantidadNe = 0;
-        int eliminarCantidadFi = 0;
-        int eliminarFechaIn = 0;
-        int eliminarFechaFin = 0;
-        int eliminarrecompensas = 0;
+
+    int opcionAdmi=0,menubloq=0,menuproyec=0,menuconf=0,modificarProyec=0,eliminarModificar=0,eliminarCategoria=0,eliminarCantidadNe=0,
+        eliminarCantidadFi=0,eliminarFechaIn=0,eliminarFechaFin=0,eliminarrecompensas=0;
+
         String nombreUsuario = "";
     //UsuarioGestor
     String usuarioGestor="Gestor";
     String contraGestor="4321";
-        int opcionGestor=0;
+
+        int opcionGestor=0,numerosProyectos=0,opcionCrearProyecto1=0,opcionCrearProyecto2=0,opcionCrearProyecto3=0,menuconfGestor=0;
         boolean bloqueadoGestor=false;
-        int numerosProyectos=0;
-        int opcionCrearProyecto1 =0;
-        int opcionCrearProyecto2 =0;
-        int opcionCrearProyecto3 =0;
-        int menuconfGestor=0;
+        float cantidadNecesariaProyecto1=0,cantidadFinanciadaProyecto1=0,cantidadNecesariaProyecto2=0,cantidadFinanciadaProyecto2=0,
+                 cantidadNecesariaProyecto3=0,cantidadFinanciadaProyecto3=0;
+
         String nombreProyecto1 ="";
         String categoriaProyecto1="";
-        float  cantidadNecesariaProyecto1=0;
-        float cantidadFinanciadaProyecto1=0;
         String fechaInicioProyecto1 ="";
         String fechaFinProyecto1 ="";
         String recompensasProyecto1 ="";
         String nombreProyecto2 ="";
         String categoriaProyecto2="";
-        float cantidadNecesariaProyecto2=0;
-        float cantidadFinanciadaProyecto2=0;
         String fechaInicioProyecto2 ="";
         String fechaFinProyecto2 ="";
         String recompensasProyecto2 ="";
         String nombreProyecto3 ="";
         String categoriaProyecto3="";
-        float cantidadNecesariaProyecto3=0;
-        float cantidadFinanciadaProyecto3=0;
         String fechaInicioProyecto3 ="";
         String fechaFinProyecto3 ="";
         String recompensasProyecto3 ="";
