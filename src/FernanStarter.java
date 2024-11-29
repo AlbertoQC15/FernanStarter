@@ -7,6 +7,7 @@ public class FernanStarter {
         String usuarioPedido = "";
         String contraPedido = "";
         int inicioPrograma=0;
+        int vistaDetallada=0;
 
     //Administrador
     String usuarioAdministrador="Administrador";
@@ -59,6 +60,9 @@ public class FernanStarter {
     int opcionSeguirAnadiendoDineroInversor1=0;
     int menuConfInversor1=0;
     int nuevoSaldoInversor1=0;
+    int inversionProyecto1Inversor1=0;
+    int inversionProyecto2Inversor1=0;
+    int inversionProyecto3Inversor1=0;
         boolean bloqueadoInversor1=false;
     //UsuarioInversor2
     String inversor2="Inversor2";
@@ -67,7 +71,6 @@ public class FernanStarter {
     int intentos=0;
     boolean acceso=false;
     do{
-        hacerRecompenas = "";
         System.out.println("*****Bienvenidos al sistema de acceso*****");
         System.out.println("Si quiere hacer login pulse 1, si quiere salir del programa 2.");
         inicioPrograma=sc.nextInt();
@@ -149,13 +152,24 @@ public class FernanStarter {
                                             switch (menuproyec){
                                                 case 1:
                                                     if (numerosProyectos == 0) {
-                                                        System.out.println("No hay proyectos disponibles.");
+                                                        System.out.println("Tienes que crear un proyecto antes.");
                                                         break;
                                                     } else if (numerosProyectos == 1) {
                                                         System.out.println("-----PROYECTO 1-----");
                                                         System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
-                                                                + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1);
+                                                        if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                            System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                            System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                                            System.out.println(recompensasProyecto111 + ", " + precioRecompensa111 + "€");
+                                                        }else {
+                                                            System.out.println("No tienes recompensas");
+                                                        }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
                                                         float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
                                                         for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
@@ -166,8 +180,19 @@ public class FernanStarter {
                                                     } else if (numerosProyectos == 2) {
                                                         System.out.println("-----PROYECTO 1-----");
                                                         System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
-                                                                + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1);
+                                                        if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                            System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                            System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                                            System.out.println(recompensasProyecto111 + ", " + precioRecompensa111 + "€");
+                                                        }else {
+                                                            System.out.println("No tienes recompensas");
+                                                        }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
                                                         float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
                                                         for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
@@ -177,8 +202,19 @@ public class FernanStarter {
                                                         System.out.println();
                                                         System.out.println("-----PROYECTO 2-----");
                                                         System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
-                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
-                                                                + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2);
+                                                        if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                                            System.out.println(recompensasProyecto22 + ", " + precioRecompensa22 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                                            System.out.println(recompensasProyecto22 + ", " + precioRecompensa22 + "€");
+                                                            System.out.println(recompensasProyecto222 + ", " + precioRecompensa222 + "€");
+                                                        }else {
+                                                            System.out.println("No tienes recompensas");
+                                                        }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
                                                         float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
                                                         for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
@@ -189,8 +225,19 @@ public class FernanStarter {
                                                     } else if (numerosProyectos == 3) {
                                                         System.out.println("-----PROYECTO 1-----");
                                                         System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
-                                                                + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1);
+                                                        if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                            System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                            System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                                            System.out.println(recompensasProyecto111 + ", " + precioRecompensa111 + "€");
+                                                        }else {
+                                                            System.out.println("No tienes recompensas");
+                                                        }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
                                                         float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
                                                         for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
@@ -200,8 +247,19 @@ public class FernanStarter {
                                                         System.out.println();
                                                         System.out.println("-----PROYECTO 2-----");
                                                         System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
-                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
-                                                                + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2);
+                                                        if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                                            System.out.println(recompensasProyecto22 + ", " + precioRecompensa22 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                                            System.out.println(recompensasProyecto22 + ", " + precioRecompensa22 + "€");
+                                                            System.out.println(recompensasProyecto222 + ", " + precioRecompensa222 + "€");
+                                                        }else {
+                                                            System.out.println("No tienes recompensas");
+                                                        }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
                                                         float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
                                                         for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
@@ -211,17 +269,27 @@ public class FernanStarter {
                                                         System.out.println();
                                                         System.out.println("-----PROYECTO 3-----");
                                                         System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
-                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
-                                                                + "\nRecompensas del proyecto: " + recompensasProyecto3);
-                                                        float porcentajeProyecto3=(cantidadFinanciadaProyecto3/cantidadNecesariaProyecto3)*100;
+                                                                + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3);
+                                                        if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto3 + ", " + precioRecompensa3 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto3 + ", " + precioRecompensa3 + "€");
+                                                            System.out.println(recompensasProyecto33 + ", " + precioRecompensa33 + "€");
+                                                        }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                            System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto3 + ", " + precioRecompensa3 + "€");
+                                                            System.out.println(recompensasProyecto33 + ", " + precioRecompensa33 + "€");
+                                                            System.out.println(recompensasProyecto333 + ", " + precioRecompensa333 + "€");
+                                                        }else {
+                                                            System.out.println("No tienes recompensas");
+                                                        }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 3.*******");
+                                                        float porcentajeProyecto3=(cantidadFinanciadaProyecto3/cantidadNecesariaProyecto3)*100;
                                                         for (int i = 0; i <porcentajeProyecto3 ; i+=2) {
                                                             System.out.print("█");
                                                         }
                                                         System.out.printf(" %.1f\n", porcentajeProyecto3);
                                                         break;
                                                     }
-                                                    break;
                                                 case 2 :
                                                     if (numerosProyectos == 0) {
                                                         System.out.println("No hay proyectos disponibles.");
@@ -230,7 +298,7 @@ public class FernanStarter {
                                                         System.out.println("-----------------------------------------------");
                                                         System.out.println("Hay " + numerosProyectos + " disponibles");
                                                         System.out.println("¿Que proyecto deseas modificar o eliminar?");
-                                                        System.out.println("Pulsa 1 para modificar o 4 para Salir");
+                                                        System.out.println("Pulsa 1 para modificarlos pulsa 4 para Salir");
                                                         System.out.println("-----------------------------------------------");
                                                         modificarProyec = sc.nextInt();
                                                         switch (modificarProyec){
@@ -315,7 +383,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar fecha inicio apertura del proyecto. "+fechaInicioProyecto1);
+                                                                System.out.println("Deseas eliminar o modificar fecha inicio apertura del proyecto."+ fechaInicioProyecto1);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -335,7 +403,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto. "+fechaInicioProyecto2);
+                                                                System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto. "+fechaFinProyecto1);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -355,7 +423,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto. " +recompensasProyecto1);
+                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto1);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
@@ -894,7 +962,7 @@ public class FernanStarter {
                                                     }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
                                                         System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
                                                         System.out.println(recompensasProyecto22 + ", " + precioRecompensa22 + "€");
-                                                        System.out.println(recompensasProyecto222 + ", " + precioRecompensa22 + "€");
+                                                        System.out.println(recompensasProyecto222 + ", " + precioRecompensa222 + "€");
                                                     }else {
                                                         System.out.println("No tienes recompensas");
                                                     }
@@ -999,8 +1067,19 @@ public class FernanStarter {
                                         } else if (numerosProyectos == 1) {
                                             System.out.println("-----PROYECTO 1-----");
                                             System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
-                                                    + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1);
+                                            if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                                System.out.println(recompensasProyecto111 + ", " + precioRecompensa111 + "€");
+                                            }else {
+                                                System.out.println("No tienes recompensas");
+                                            }
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
                                             float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
                                             for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
@@ -1011,8 +1090,19 @@ public class FernanStarter {
                                         } else if (numerosProyectos == 2) {
                                             System.out.println("-----PROYECTO 1-----");
                                             System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
-                                                    + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1);
+                                            if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                                System.out.println(recompensasProyecto111 + ", " + precioRecompensa111 + "€");
+                                            }else {
+                                                System.out.println("No tienes recompensas");
+                                            }
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
                                             float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
                                             for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
@@ -1022,8 +1112,19 @@ public class FernanStarter {
                                             System.out.println();
                                             System.out.println("-----PROYECTO 2-----");
                                             System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
-                                                    + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2);
+                                            if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                                System.out.println(recompensasProyecto22 + ", " + precioRecompensa22 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                                System.out.println(recompensasProyecto22 + ", " + precioRecompensa22 + "€");
+                                                System.out.println(recompensasProyecto222 + ", " + precioRecompensa222 + "€");
+                                            }else {
+                                                System.out.println("No tienes recompensas");
+                                            }
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
                                             float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
                                             for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
@@ -1034,8 +1135,19 @@ public class FernanStarter {
                                         } else if (numerosProyectos == 3) {
                                             System.out.println("-----PROYECTO 1-----");
                                             System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
-                                                    + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1);
+                                            if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto1 + ", " + precioRecompensa1 + "€");
+                                                System.out.println(recompensasProyecto11 + ", " + precioRecompensa11 + "€");
+                                                System.out.println(recompensasProyecto111 + ", " + precioRecompensa111 + "€");
+                                            }else {
+                                                System.out.println("No tienes recompensas");
+                                            }
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
                                             float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
                                             for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
@@ -1045,8 +1157,19 @@ public class FernanStarter {
                                             System.out.println();
                                             System.out.println("-----PROYECTO 2-----");
                                             System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
-                                                    + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2);
+                                            if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                                System.out.println(recompensasProyecto22 + ", " + precioRecompensa22 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto2 + ", " + precioRecompensa2 + "€");
+                                                System.out.println(recompensasProyecto22 + ", " + precioRecompensa22 + "€");
+                                                System.out.println(recompensasProyecto222 + ", " + precioRecompensa222 + "€");
+                                            }else {
+                                                System.out.println("No tienes recompensas");
+                                            }
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
                                             float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
                                             for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
@@ -1056,8 +1179,19 @@ public class FernanStarter {
                                             System.out.println();
                                             System.out.println("-----PROYECTO 3-----");
                                             System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
-                                                    + "\nRecompensas del proyecto: " + recompensasProyecto3);
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3);
+                                            if (hacerRecompenas.equals("si") && numRecompensas == 1){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto3 + ", " + precioRecompensa3 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 2){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto3 + ", " + precioRecompensa3 + "€");
+                                                System.out.println(recompensasProyecto33 + ", " + precioRecompensa33 + "€");
+                                            }else if (hacerRecompenas.equals("si") && numRecompensas == 3){
+                                                System.out.println("Recompensas del proyecto y su precio: " + recompensasProyecto3 + ", " + precioRecompensa3 + "€");
+                                                System.out.println(recompensasProyecto33 + ", " + precioRecompensa33 + "€");
+                                                System.out.println(recompensasProyecto333 + ", " + precioRecompensa333 + "€");
+                                            }else {
+                                                System.out.println("No tienes recompensas");
+                                            }
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 3.*******");
                                             float porcentajeProyecto3=(cantidadFinanciadaProyecto3/cantidadNecesariaProyecto3)*100;
                                             for (int i = 0; i <porcentajeProyecto3 ; i+=2) {
@@ -1576,7 +1710,109 @@ public class FernanStarter {
                                 switch (opcionInversor1) {
                                     case 1:
                                         System.out.println("Bienvenido a Mis Inversiones.");
-
+                                        if (inversionProyecto1Inversor1==0&&inversionProyecto2Inversor1==0&&inversionProyecto3Inversor1==0) {
+                                            System.out.println("No has invertido en ningún proyecto.");
+                                        } else if (inversionProyecto1Inversor1>0&&inversionProyecto2Inversor1==0&&inversionProyecto3Inversor1==0) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 +"Cantidad invertida: "+inversionProyecto1Inversor1);
+                                            System.out.println("¿Quieres ver una vista detallada del proyecto?(1 si, 2 no)");
+                                            vistaDetallada=sc.nextInt();
+                                            switch (vistaDetallada){
+                                                case 1:
+                                                    System.out.println("-----PROYECTO 1-----");
+                                                    System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                                    float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                    for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                                    break;
+                                                case 2:
+                                                    break;
+                                            }
+                                        } else if (inversionProyecto1Inversor1>0&&inversionProyecto2Inversor1>2&&inversionProyecto3Inversor1==0) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 +"Cantidad invertida: "+inversionProyecto1Inversor1);
+                                            System.out.println("-----PROYECTO 2-----");
+                                            System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 +"Cantidad invertida: "+inversionProyecto2Inversor1);
+                                            System.out.println("¿Quieres ver una vista detallada de los proyecto?(1 si, 2 no)");
+                                            vistaDetallada=sc.nextInt();
+                                            switch (vistaDetallada){
+                                                case 1:
+                                                    System.out.println("-----PROYECTO 1-----");
+                                                    System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                                    float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                    for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                                    System.out.println("-----PROYECTO 2-----");
+                                                    System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                                    float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                                    for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto2);
+                                                    break;
+                                                case 2:
+                                                    break;
+                                            }
+                                        } else if (inversionProyecto1Inversor1>0&&inversionProyecto2Inversor1>2&&inversionProyecto3Inversor1>0) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 +"Cantidad invertida: "+inversionProyecto1Inversor1);
+                                            System.out.println("-----PROYECTO 2-----");
+                                            System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 +"Cantidad invertida: "+inversionProyecto2Inversor1);
+                                            System.out.println("-----PROYECTO 3-----");
+                                            System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 +"Cantidad invertida: "+inversionProyecto3Inversor1);
+                                            System.out.println("¿Quieres ver una vista detallada de los proyecto?(1 si, 2 no)");
+                                            vistaDetallada=sc.nextInt();
+                                            switch (vistaDetallada){
+                                                case 1:
+                                                    System.out.println("-----PROYECTO 1-----");
+                                                    System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                                    float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                    for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                                    System.out.println("-----PROYECTO 2-----");
+                                                    System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                                    float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                                    for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto2);
+                                                    System.out.println("-----PROYECTO 3-----");
+                                                    System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto3);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 3.*******");
+                                                    float porcentajeProyecto3=(cantidadFinanciadaProyecto3/cantidadNecesariaProyecto3)*100;
+                                                    for (int i = 0; i <porcentajeProyecto3 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto3);
+                                                    break;
+                                                case 2:
+                                                    break;
+                                            }
+                                        }
+                                        break;
                                     case 2:
                                         System.out.println("----Listado de los actuales proyectos creados-----");
                                         if (numerosProyectos == 0) {
@@ -1652,6 +1888,7 @@ public class FernanStarter {
                                             System.out.printf(" %.1f\n", porcentajeProyecto3);
                                             break;
                                         }
+                                        break;
                                     case 3:
                                         System.out.println("Bienvenido a tu cartera digital.");
                                         System.out.println("Tu saldo actual es de "+saldoActualInversor1+"€");
