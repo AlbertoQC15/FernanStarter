@@ -54,6 +54,9 @@ public class FernanStarter {
     //UsuarioInversor1
     String inversor1="Inversor1";
     String inversorContra="Inversor1";
+    String correo = "";
+    String listaDeAmigos = "";
+    int opcionAgregar  = 0;
     int opcionInversor1=0;
     int saldoActualInversor1=0;
     int opcionSaldoCarteraInversor1=0;
@@ -71,6 +74,22 @@ public class FernanStarter {
     //UsuarioInversor2
     String inversor2="Inversor2";
     String inversor2Contra="Inversor2";
+        String correo2 = "";
+        String listaDeAmigos2 = "";
+        int opcionAgregar2  = 0;
+        int opcionInversor2=0;
+        int saldoActualInversor2=0;
+        int opcionSaldoCarteraInversor2=0;
+        int opcionSeguirAnadiendoDineroInversor2=0;
+        int menuConfInversor2=0;
+        int nuevoSaldoInversor2=0;
+        int inversionProyecto1Inversor2=0;
+        int inversionProyecto2Inversor2=0;
+        int inversionProyecto3Inversor2=0;
+        int menuInvertirProyectos2=0;
+        int cantidadInvertida2Proyecto1=0;
+        int cantidadInvertida2Proyecto2=0;
+        int cantidadInvertida2Proyecto3=0;
         boolean bloqueadoInversor2=false;
     int intentos=0;
     boolean acceso=false;
@@ -1725,10 +1744,10 @@ public class FernanStarter {
                                                 case 1:
                                                     System.out.println("-----PROYECTO 1-----");
                                                     System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + inversionProyecto1Inversor2 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                             + "\nRecompensas del proyecto: " + recompensasProyecto1);
                                                     System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
-                                                    float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                    float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
                                                     for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
                                                         System.out.print("█");
                                                     }
@@ -1748,20 +1767,20 @@ public class FernanStarter {
                                                 case 1:
                                                     System.out.println("-----PROYECTO 1-----");
                                                     System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                             + "\nRecompensas del proyecto: " + recompensasProyecto1);
                                                     System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
-                                                    float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                    float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
                                                     for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
                                                         System.out.print("█");
                                                     }
                                                     System.out.printf(" %.1f\n", porcentajeProyecto1);
                                                     System.out.println("-----PROYECTO 2-----");
                                                     System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
-                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + inversionProyecto2Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
                                                             + "\nRecompensas del proyecto: " + recompensasProyecto2);
                                                     System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
-                                                    float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                                    float porcentajeProyecto2=((cantidadFinanciadaProyecto2 + (inversionProyecto2Inversor1 + inversionProyecto2Inversor2)) /cantidadNecesariaProyecto2)*100;
                                                     for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
                                                         System.out.print("█");
                                                     }
@@ -1783,30 +1802,30 @@ public class FernanStarter {
                                                 case 1:
                                                     System.out.println("-----PROYECTO 1-----");
                                                     System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                             + "\nRecompensas del proyecto: " + recompensasProyecto1);
                                                     System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
-                                                    float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                    float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
                                                     for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
                                                         System.out.print("█");
                                                     }
                                                     System.out.printf(" %.1f\n", porcentajeProyecto1);
                                                     System.out.println("-----PROYECTO 2-----");
                                                     System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
-                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + inversionProyecto2Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
                                                             + "\nRecompensas del proyecto: " + recompensasProyecto2);
                                                     System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
-                                                    float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                                    float porcentajeProyecto2=((cantidadFinanciadaProyecto2 + (inversionProyecto2Inversor1 + inversionProyecto2Inversor2)) /cantidadNecesariaProyecto2)*100;
                                                     for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
                                                         System.out.print("█");
                                                     }
                                                     System.out.printf(" %.1f\n", porcentajeProyecto2);
                                                     System.out.println("-----PROYECTO 3-----");
                                                     System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
-                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + inversionProyecto3Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
                                                             + "\nRecompensas del proyecto: " + recompensasProyecto3);
                                                     System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 3.*******");
-                                                    float porcentajeProyecto3=(cantidadFinanciadaProyecto3/cantidadNecesariaProyecto3)*100;
+                                                    float porcentajeProyecto3=((cantidadFinanciadaProyecto3 + (inversionProyecto3Inversor1 + inversionProyecto3Inversor2)) /cantidadNecesariaProyecto3)*100;
                                                     for (int i = 0; i <porcentajeProyecto3 ; i+=2) {
                                                         System.out.print("█");
                                                     }
@@ -1825,33 +1844,33 @@ public class FernanStarter {
                                         } else if (numerosProyectos == 1) {
                                             System.out.println("-----PROYECTO 1-----");
                                             System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto1);
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
-                                            float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                            float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
                                             for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
                                                 System.out.print("█");
                                             }
                                             System.out.printf(" %.1f\n", porcentajeProyecto1);
+
                                             break;
                                         } else if (numerosProyectos == 2) {
                                             System.out.println("-----PROYECTO 1-----");
                                             System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto1);
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
-                                            float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                            float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
                                             for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
                                                 System.out.print("█");
                                             }
                                             System.out.printf(" %.1f\n", porcentajeProyecto1);
-                                            System.out.println();
                                             System.out.println("-----PROYECTO 2-----");
                                             System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + inversionProyecto2Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto2);
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
-                                            float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                            float porcentajeProyecto2=((cantidadFinanciadaProyecto2 + (inversionProyecto2Inversor1 + inversionProyecto2Inversor2)) /cantidadNecesariaProyecto2)*100;
                                             for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
                                                 System.out.print("█");
                                             }
@@ -1860,32 +1879,30 @@ public class FernanStarter {
                                         } else if (numerosProyectos == 3) {
                                             System.out.println("-----PROYECTO 1-----");
                                             System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto1);
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
-                                            float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                            float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
                                             for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
                                                 System.out.print("█");
                                             }
                                             System.out.printf(" %.1f\n", porcentajeProyecto1);
-                                            System.out.println();
                                             System.out.println("-----PROYECTO 2-----");
                                             System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + inversionProyecto2Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto2);
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
-                                            float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                            float porcentajeProyecto2=((cantidadFinanciadaProyecto2 + (inversionProyecto2Inversor1 + inversionProyecto2Inversor2)) /cantidadNecesariaProyecto2)*100;
                                             for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
                                                 System.out.print("█");
                                             }
                                             System.out.printf(" %.1f\n", porcentajeProyecto2);
-                                            System.out.println();
                                             System.out.println("-----PROYECTO 3-----");
                                             System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
-                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + inversionProyecto3Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
                                                     + "\nRecompensas del proyecto: " + recompensasProyecto3);
                                             System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 3.*******");
-                                            float porcentajeProyecto3=(cantidadFinanciadaProyecto3/cantidadNecesariaProyecto3)*100;
+                                            float porcentajeProyecto3=((cantidadFinanciadaProyecto3 + (inversionProyecto3Inversor1 + inversionProyecto3Inversor2)) /cantidadNecesariaProyecto3)*100;
                                             for (int i = 0; i <porcentajeProyecto3 ; i+=2) {
                                                 System.out.print("█");
                                             }
@@ -2040,6 +2057,40 @@ public class FernanStarter {
                                         break;
                                     case 4:
                                         System.out.println("-----Menú de tus amigos-----");
+                                        do {
+                                            System.out.println("1. Mostrar lista de amigos referidos");
+                                            System.out.println("2. Añadir un nuevo amigo");
+                                            System.out.println("3. Salir");
+                                            System.out.println("Seleccione una opción: ");
+                                            opcionAgregar = sc.nextInt();
+                                            switch (opcionAgregar) {
+                                                case 1:
+                                                    if (listaDeAmigos.length() == 0) {
+                                                        System.out.println("No hay amigos en la lista.");
+                                                    } else {
+                                                        System.out.println("Amigos: " + listaDeAmigos);
+                                                    }
+                                                    break;
+                                                case 2:
+                                                    System.out.print("Introduce el correo del amigo: ");
+                                                    correo = sc.next();
+                                                    if (listaDeAmigos.length() == 0) {
+                                                        listaDeAmigos = correo;
+                                                    } else {
+                                                        listaDeAmigos = listaDeAmigos.concat(", ").concat(correo);
+                                                    }
+                                                    System.out.println("Amigo añadido.");
+                                                    break;
+                                                case 3:
+                                                    System.out.println("Saliste del menú de amigos");
+                                                    break;
+
+                                                default:
+                                                    System.out.println("Opción no válida. Intenta de nuevo.");
+                                                    break;
+                                            }
+                                        } while (opcionAgregar != 3);
+                                        break;
                                     case 5:
                                         System.out.println("Bienvenido a la configuración.");
                                         do {
@@ -2082,6 +2133,406 @@ public class FernanStarter {
                         } else if (contraPedido.equals(inversor2Contra)) {
                             System.out.println("Login realizado. Bienvenido " + inversor2);
                             acceso = true;
+                            //MENÚ INVERSOR 2
+                            do {
+                                System.out.println("------MENÚ INVERSOR 2------");
+                                System.out.println("1. Mis inversiones.");
+                                System.out.println("2. Proyectos.");
+                                System.out.println("3. Cartera digital.");
+                                System.out.println("4. Invitar a un amigo.");
+                                System.out.println("5. Configuración.");
+                                System.out.println("6. Cerrar sesión.");
+                                opcionInversor2 = sc.nextInt();
+                                switch (opcionInversor2) {
+                                    case 1:
+                                        System.out.println("Bienvenido a Mis Inversiones.");
+                                        if (inversionProyecto1Inversor2==0&&inversionProyecto2Inversor2==0&&inversionProyecto3Inversor2==0) {
+                                            System.out.println("No has invertido en ningún proyecto.");
+                                        } else if (inversionProyecto1Inversor2>0&&inversionProyecto2Inversor2==0&&inversionProyecto3Inversor2==0) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 +"Cantidad invertida: "+inversionProyecto1Inversor2);
+                                            System.out.println("¿Quieres ver una vista detallada del proyecto?(1 si, 2 no)");
+                                            vistaDetallada=sc.nextInt();
+                                            switch (vistaDetallada){
+                                                case 1:
+                                                    System.out.println("-----PROYECTO 1-----");
+                                                    System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                                    float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
+                                                    for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                                    break;
+                                                case 2:
+                                                    break;
+                                            }
+                                        } else if (inversionProyecto1Inversor2>0&&inversionProyecto2Inversor2>2&&inversionProyecto3Inversor2==0) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 +"Cantidad invertida: "+inversionProyecto1Inversor2);
+                                            System.out.println("-----PROYECTO 2-----");
+                                            System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 +"Cantidad invertida: "+inversionProyecto2Inversor2);
+                                            System.out.println("¿Quieres ver una vista detallada de los proyecto?(1 si, 2 no)");
+                                            vistaDetallada=sc.nextInt();
+                                            switch (vistaDetallada){
+                                                case 1:
+                                                    System.out.println("-----PROYECTO 1-----");
+                                                    System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                                    float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
+                                                    for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                                    System.out.println("-----PROYECTO 2-----");
+                                                    System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + inversionProyecto2Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                                    float porcentajeProyecto2=((cantidadFinanciadaProyecto2 + (inversionProyecto2Inversor1 + inversionProyecto2Inversor2)) /cantidadNecesariaProyecto2)*100;
+                                                    for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto2);
+                                                    break;
+                                                case 2:
+                                                    break;
+                                            }
+                                        } else if (inversionProyecto1Inversor2>0&&inversionProyecto2Inversor2>0&&inversionProyecto3Inversor2>0) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 +"Cantidad invertida: "+inversionProyecto1Inversor1);
+                                            System.out.println("-----PROYECTO 2-----");
+                                            System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 +"Cantidad invertida: "+inversionProyecto2Inversor1);
+                                            System.out.println("-----PROYECTO 3-----");
+                                            System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 +"Cantidad invertida: "+inversionProyecto3Inversor1);
+                                            System.out.println("¿Quieres ver una vista detallada de los proyecto?(1 si, 2 no)");
+                                            vistaDetallada=sc.nextInt();
+                                            switch (vistaDetallada){
+                                                case 1:
+                                                    System.out.println("-----PROYECTO 1-----");
+                                                    System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                                    float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
+                                                    for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                                    System.out.println("-----PROYECTO 2-----");
+                                                    System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + inversionProyecto2Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                                    float porcentajeProyecto2=((cantidadFinanciadaProyecto2 + (inversionProyecto2Inversor1 + inversionProyecto2Inversor2)) /cantidadNecesariaProyecto2)*100;
+                                                    for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto2);
+                                                    System.out.println("-----PROYECTO 3-----");
+                                                    System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
+                                                            + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + inversionProyecto3Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
+                                                            + "\nRecompensas del proyecto: " + recompensasProyecto3);
+                                                    System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 3.*******");
+                                                    float porcentajeProyecto3=((cantidadFinanciadaProyecto3 + (inversionProyecto3Inversor1 + inversionProyecto3Inversor2)) /cantidadNecesariaProyecto3)*100;
+                                                    for (int i = 0; i <porcentajeProyecto3 ; i+=2) {
+                                                        System.out.print("█");
+                                                    }
+                                                    System.out.printf(" %.1f\n", porcentajeProyecto3);
+                                                    break;
+                                                case 2:
+                                                    break;
+                                            }
+                                        }
+                                        break;
+                                    case 2:
+                                        System.out.println("----Listado de los actuales proyectos creados-----");
+                                        if (numerosProyectos == 0) {
+                                            System.out.println("No hay proyectos creados actualmente.");
+                                            break;
+                                        } else if (numerosProyectos == 1) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                            float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
+                                            for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                            break;
+                                        } else if (numerosProyectos == 2) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                            float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
+                                            for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                            System.out.println("-----PROYECTO 2-----");
+                                            System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + inversionProyecto2Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                            float porcentajeProyecto2=((cantidadFinanciadaProyecto2 + (inversionProyecto2Inversor1 + inversionProyecto2Inversor2)) /cantidadNecesariaProyecto2)*100;
+                                            for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto2);
+                                            break;
+                                        } else if (numerosProyectos == 3) {
+                                            System.out.println("-----PROYECTO 1-----");
+                                            System.out.println("Nombre: " + nombreProyecto1 + "\nCategoria: " + categoriaProyecto1 + "\nCantidad necesaria: " + cantidadNecesariaProyecto1
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto1 + inversionProyecto1Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto1 + " \nFecha fin proyecto: " + fechaFinProyecto1
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto1);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
+                                            float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
+                                            for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto1);
+                                            System.out.println("-----PROYECTO 2-----");
+                                            System.out.println("Nombre: " + nombreProyecto2 + "\nCategoria: " + categoriaProyecto2 + "\nCantidad necesaria: " + cantidadNecesariaProyecto2
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto2 + inversionProyecto2Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto2 + " \nFecha fin proyecto: " + fechaFinProyecto2
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto2);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
+                                            float porcentajeProyecto2=((cantidadFinanciadaProyecto2 + (inversionProyecto2Inversor1 + inversionProyecto2Inversor2)) /cantidadNecesariaProyecto2)*100;
+                                            for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto2);
+                                            System.out.println("-----PROYECTO 3-----");
+                                            System.out.println("Nombre: " + nombreProyecto3 + "\nCategoria: " + categoriaProyecto3 + "\nCantidad necesaria: " + cantidadNecesariaProyecto3
+                                                    + " \nCantidad financiada: " + cantidadFinanciadaProyecto3 + inversionProyecto3Inversor1 + " \nFecha inicio proyecto: " + fechaInicioProyecto3 + " \nFecha fin proyecto: " + fechaFinProyecto3
+                                                    + "\nRecompensas del proyecto: " + recompensasProyecto3);
+                                            System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 3.*******");
+                                            float porcentajeProyecto3=((cantidadFinanciadaProyecto3 + (inversionProyecto3Inversor1 + inversionProyecto3Inversor2)) /cantidadNecesariaProyecto3)*100;
+                                            for (int i = 0; i <porcentajeProyecto3 ; i+=2) {
+                                                System.out.print("█");
+                                            }
+                                            System.out.printf(" %.1f\n", porcentajeProyecto3);
+                                            break;
+                                        }
+                                        break;
+                                    case 3:
+                                        System.out.println("Bienvenido a tu cartera digital.");
+                                        System.out.println("Tu saldo actual es de "+saldoActualInversor2+"€");
+                                        System.out.println("1. Añadir saldo.");
+                                        System.out.println("2. Invertir en los proyectos.");
+                                        System.out.println("3. Salir.");
+                                        opcionSaldoCarteraInversor2=sc.nextInt();
+                                        switch (opcionSaldoCarteraInversor2) {
+                                            case 1:
+                                                System.out.println("¿Cuánto quiere añadir a su cartera?");
+                                                saldoActualInversor2=sc.nextInt();
+                                                do{
+                                                    System.out.println("Actualmente tiene "+saldoActualInversor2+"€.");
+                                                    System.out.println("¿Desea seguir añadiendo a su cartera?(1 Si 2 No)");
+                                                    opcionSeguirAnadiendoDineroInversor2=sc.nextInt();
+                                                    switch (opcionSeguirAnadiendoDineroInversor2){
+                                                        case 1:
+                                                            System.out.println("¿Cuánto quieres añadir?");
+                                                            nuevoSaldoInversor2=sc.nextInt();
+                                                            if (nuevoSaldoInversor2>0) {
+                                                                saldoActualInversor2+=nuevoSaldoInversor2;
+                                                                System.out.println("Se han añadido exitosamente a tu cuenta");
+                                                                break;
+                                                            }else {
+                                                                System.out.println("El saldo no se ha podido añadir, no se admiten números negativos");
+                                                                break;
+                                                            }
+                                                    }
+                                                }while (opcionSeguirAnadiendoDineroInversor2!=2);
+                                                System.out.println("Saliendo de la opcion añadir saldo");
+                                                break;
+                                            case 2:
+                                                if (numerosProyectos==0){
+                                                    System.out.println("No hay ningún proyecto para invertir.");
+                                                }else if (numerosProyectos==1) {
+                                                    System.out.println("¿En qué proyecto quieres invertir?");
+                                                    System.out.println("1. Invertir en el proyecto 1.");
+                                                    System.out.println("2. Salir.");
+                                                    menuInvertirProyectos2 = sc.nextInt();
+                                                    switch (menuInvertirProyectos2) {
+                                                        case 1:
+                                                            if (saldoActualInversor2 <= 0) {
+                                                                System.out.println("No tienes saldo en la cartera.");
+                                                                break;
+                                                            } else if (saldoActualInversor2 > cantidadNecesariaProyecto3 || saldoActualInversor2 < cantidadNecesariaProyecto3||saldoActualInversor2==cantidadNecesariaProyecto3) {
+                                                                System.out.println("¿Cuánto quieres invertir?");
+                                                                inversionProyecto1Inversor2 = sc.nextInt();
+                                                                System.out.println("Has invertido " + inversionProyecto1Inversor2 + "€");
+                                                                inversionProyecto1Inversor2 += cantidadFinanciadaProyecto1;
+                                                                saldoActualInversor2 -= inversionProyecto1Inversor2;
+                                                                break;
+                                                            }
+                                                        case 2:
+                                                            System.out.println("Saliendo de invertir proyectos.");
+                                                            break;
+                                                    }
+                                                } else if (numerosProyectos==2) {
+                                                    System.out.println("¿En qué proyecto quieres invertir?");
+                                                    System.out.println("1. Invertir en el proyecto 1.");
+                                                    System.out.println("2. Invertir en el proyecto 2.");
+                                                    System.out.println("3. Salir.");
+                                                    menuInvertirProyectos = sc.nextInt();
+                                                    switch (menuInvertirProyectos) {
+                                                        case 1:
+                                                            if (saldoActualInversor2 <= 0) {
+                                                                System.out.println("No tienes saldo en la cartera.");
+                                                                break;
+                                                            } else if (saldoActualInversor2 > cantidadNecesariaProyecto3 || saldoActualInversor2 < cantidadNecesariaProyecto3||saldoActualInversor2==cantidadNecesariaProyecto3) {
+                                                                System.out.println("¿Cuánto quieres invertir?");
+                                                                inversionProyecto1Inversor2 = sc.nextInt();
+                                                                System.out.println("Has invertido " + inversionProyecto1Inversor2 + "€");
+                                                                inversionProyecto1Inversor2 += cantidadFinanciadaProyecto1;
+                                                                saldoActualInversor2 -= inversionProyecto1Inversor2;
+                                                                break;
+                                                            }
+                                                        case 2:
+                                                            if (saldoActualInversor2 <= 0) {
+                                                                System.out.println("No tienes saldo en la cartera.");
+                                                                break;
+                                                            } else if (saldoActualInversor2 > cantidadNecesariaProyecto3 || saldoActualInversor2 < cantidadNecesariaProyecto3||saldoActualInversor2==cantidadNecesariaProyecto3) {
+                                                                System.out.println("¿Cuánto quieres invertir?");
+                                                                inversionProyecto2Inversor2 = sc.nextInt();
+                                                                System.out.println("Has invertido " + inversionProyecto2Inversor2 + "€");
+                                                                inversionProyecto2Inversor2 += cantidadFinanciadaProyecto2;
+                                                                saldoActualInversor2 -= inversionProyecto2Inversor2;
+                                                                break;
+                                                            }
+                                                        case 3:
+                                                            System.out.println("Saliendo de invertir proyectos.");
+                                                            break;
+                                                    }
+                                                } else if (numerosProyectos==3) {
+                                                    System.out.println("¿En qué proyecto quieres invertir?");
+                                                    System.out.println("1. Invertir en el proyecto 1.");
+                                                    System.out.println("2. Invertir en el proyecto 2.");
+                                                    System.out.println("3. Invertir en el proyecto 3.");
+                                                    System.out.println("4. Salir.");
+                                                    menuInvertirProyectos = sc.nextInt();
+                                                    switch (menuInvertirProyectos) {
+                                                        case 1:
+                                                            if (saldoActualInversor2 <= 0) {
+                                                                System.out.println("No tienes saldo en la cartera.");
+                                                                break;
+                                                            } else if (saldoActualInversor2 > cantidadNecesariaProyecto3 || saldoActualInversor2 < cantidadNecesariaProyecto3||saldoActualInversor2==cantidadNecesariaProyecto3) {
+                                                                System.out.println("¿Cuánto quieres invertir?");
+                                                                inversionProyecto1Inversor2 = sc.nextInt();
+                                                                System.out.println("Has invertido " + inversionProyecto1Inversor2 + "€");
+                                                                inversionProyecto1Inversor2 += cantidadFinanciadaProyecto1;
+                                                                saldoActualInversor2 -= inversionProyecto1Inversor2;
+                                                                break;
+                                                            }
+                                                        case 2:
+                                                            if (saldoActualInversor2 <= 0) {
+                                                                System.out.println("No tienes saldo en la cartera.");
+                                                                break;
+                                                            } else if (saldoActualInversor2 > cantidadNecesariaProyecto3 || saldoActualInversor2 < cantidadNecesariaProyecto3||saldoActualInversor2==cantidadNecesariaProyecto3) {
+                                                                System.out.println("¿Cuánto quieres invertir?");
+                                                                inversionProyecto2Inversor2 = sc.nextInt();
+                                                                System.out.println("Has invertido " + inversionProyecto2Inversor2 + "€");
+                                                                inversionProyecto2Inversor2 += cantidadFinanciadaProyecto2;
+                                                                saldoActualInversor2 -= inversionProyecto2Inversor2;
+                                                                break;
+                                                            }
+                                                        case 3:
+                                                            if (saldoActualInversor2 <= 0) {
+                                                                System.out.println("No tienes saldo en la cartera.");
+                                                                break;
+                                                            } else if (saldoActualInversor2 > cantidadNecesariaProyecto3 || saldoActualInversor2 < cantidadNecesariaProyecto3||saldoActualInversor2==cantidadNecesariaProyecto3) {
+                                                                System.out.println("¿Cuánto quieres invertir?");
+                                                                inversionProyecto3Inversor1 = sc.nextInt();
+                                                                System.out.println("Has invertido " + inversionProyecto3Inversor2 + "€");
+                                                                inversionProyecto3Inversor2 += cantidadFinanciadaProyecto3;
+                                                                saldoActualInversor2 -= inversionProyecto3Inversor2;
+                                                                break;
+                                                            }
+                                                        case 4:
+                                                            System.out.println("Saliendo de invertir proyectos.");
+                                                            break;
+                                                    }
+                                                }
+                                            case 3:
+                                                System.out.println("Saliendo de su cartera digital.");
+                                                break;
+                                        }
+                                        break;
+                                    case 4:
+                                        System.out.println("-----Menú de tus amigos-----");
+                                        do {
+                                            System.out.println("1. Mostrar lista de amigos referidos");
+                                            System.out.println("2. Añadir un nuevo amigo");
+                                            System.out.println("3. Salir");
+                                            System.out.println("Seleccione una opción: ");
+                                            opcionAgregar2 = sc.nextInt();
+                                            switch (opcionAgregar2) {
+                                                case 1:
+                                                    if (listaDeAmigos2.length() == 0) {
+                                                        System.out.println("No hay amigos en la lista.");
+                                                    } else {
+                                                        System.out.println("Amigos: " + listaDeAmigos2);
+                                                    }
+                                                    break;
+                                                case 2:
+                                                    System.out.print("Introduce el correo del amigo: ");
+                                                    correo2 = sc.next();
+                                                    if (listaDeAmigos2.length() == 0) {
+                                                        listaDeAmigos2 = correo2;
+                                                    } else {
+                                                        listaDeAmigos2 = listaDeAmigos2.concat(", ").concat(correo);
+                                                    }
+                                                    System.out.println("Amigo añadido.");
+                                                    break;
+                                                case 3:
+                                                    System.out.println("Saliste del menú de amigos");
+                                                    break;
+
+                                                default:
+                                                    System.out.println("Opción no válida. Intenta de nuevo.");
+                                                    break;
+                                            }
+                                        } while (opcionAgregar2 != 3);
+                                        break;
+                                    case 5:
+                                        System.out.println("Bienvenido a la configuración.");
+                                        do {
+                                            System.out.println("1. Cambiar nombre de usuario.");
+                                            System.out.println("2. Cambiar la contraseña de usuario.");
+                                            System.out.println("3. Salir.");
+                                            menuConfInversor2 = sc.nextInt();
+                                            switch (menuConfInversor2) {
+                                                case 1:
+                                                    System.out.println("Tu nombre actual es: " + inversor2);
+                                                    System.out.print("Pon tu nuevo nombre: ");
+                                                    inversor2 = sc.next();
+                                                    System.out.println("Cambiaste tu nombre a: " + inversor2);
+                                                    break;
+                                                case 2:
+                                                    System.out.println("Tu contraseña actual es: " + inversor2Contra);
+                                                    System.out.print("Pon tu nueva contraseña: ");
+                                                    inversor2Contra = sc.next();
+                                                    System.out.println("Cambiaste tu contraseña a: " + inversor2Contra);
+                                                    break;
+                                                default:
+                                                    if (menuConfInversor2>3 || menuConfInversor2<=0)
+                                                        System.out.println("Tienes que elegir una de las opciones");
+                                            }
+                                        } while (menuConfInversor2 != 3);
+                                        System.out.println("Saliendo de configuración.");
+                                }
+                            }while (opcionInversor2 != 6);
+                            System.out.println("Cerraste sesión.");
+                            acceso=false;
                         } else {
                             System.out.println("Login fallido");
                             intentos++;
@@ -2097,6 +2548,7 @@ public class FernanStarter {
                     }
                     break;
                 }
+                break;
         }
     }while (inicioPrograma!=2);
         System.out.println("Saliendo del programa.");
