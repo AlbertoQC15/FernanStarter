@@ -159,9 +159,11 @@ public class FernanStarter {
                                                     break;
                                                 default:
                                                     System.out.println("Tienes que elegir una de las opciones");
+                                                    break;
                                             }
+                                            break;
                                         } while (menubloq != 3);
-
+                                            break;
                                     case 2:
                                         System.out.println("Bienvenido a Proyectos que deseas");
                                         do {
@@ -446,18 +448,60 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto1);
+                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto1 +recompensasProyecto11+recompensasProyecto111);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
                                                                 eliminarrecompensas = sc.nextInt();
                                                                 switch (eliminarrecompensas){
                                                                     case 1 :
-                                                                        System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
-                                                                        recompensasProyecto1 = sc.next();
-                                                                        break;
+                                                                        if (numRecompensas==1){
+                                                                            System.out.println("Nuevas recompensas del Proyecto 1.");
+                                                                            System.out.println("Recompensa 1.");
+                                                                            recompensasProyecto1 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 1 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa1=sc.nextInt();
+                                                                            break;
+                                                                        } else if (numRecompensas==2) {
+                                                                            System.out.println("Nuevas recompensas del Proyecto 1.");
+                                                                            System.out.println("Recompensa 1.");
+                                                                            recompensasProyecto1 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 1 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa1=sc.nextInt();
+                                                                            System.out.println("Recompensa 2.");
+                                                                            recompensasProyecto11 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 2 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa11=sc.nextInt();
+                                                                            break;
+                                                                        } else if (numRecompensas==3) {
+                                                                            System.out.println("Nuevas recompensas del Proyecto 1.");
+                                                                            System.out.println("Recompensa 1.");
+                                                                            recompensasProyecto1 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 1 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa1=sc.nextInt();
+                                                                            System.out.println("Recompensa 2.");
+                                                                            recompensasProyecto11 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 2 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa11=sc.nextInt();
+                                                                            System.out.println("Recompensa 3.");
+                                                                            recompensasProyecto111 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 3 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa111=sc.nextInt();
+                                                                            break;
+                                                                        } else if (numRecompensas==0) {
+                                                                            System.out.println("Este proyecto no tiene recompensas.");
+                                                                            break;
+                                                                        }
                                                                     case 2 :
                                                                         recompensasProyecto1 = "";
+                                                                        recompensasProyecto11 = "";
+                                                                        recompensasProyecto111 = "";
                                                                         break;
                                                                     case 3 :
                                                                         System.out.println("Saliste exitosamente.");
@@ -572,6 +616,7 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
+
                                                                 System.out.println("Deseas eliminar o modificar fecha fin apertura del proyecto. "+fechaFinProyecto2);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
@@ -579,7 +624,7 @@ public class FernanStarter {
                                                                 eliminarFechaFin = sc.nextInt();
                                                                 switch (eliminarFechaFin){
                                                                     case 1 :
-                                                                        System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                                        System.out.println("Nueva cantidad fecha fin apertura del proyecto.");
                                                                         fechaFinProyecto2 = sc.next();
                                                                         break;
                                                                     case 2 :
@@ -592,18 +637,60 @@ public class FernanStarter {
                                                                         System.out.println("Tienes que meter una de las opciones");
                                                                         break;
                                                                 }
-                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto2);
+                                                                System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto2+recompensasProyecto22+recompensasProyecto222);
                                                                 System.out.println("1. Modificar");
                                                                 System.out.println("2. Eliminar");
                                                                 System.out.println("3. Salir");
                                                                 eliminarrecompensas = sc.nextInt();
                                                                 switch (eliminarrecompensas){
                                                                     case 1 :
-                                                                        System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
-                                                                        recompensasProyecto2 = sc.next();
-                                                                        break;
+                                                                        if (numRecompensas==1){
+                                                                            System.out.println("Nuevas recompensas del Proyecto 2.");
+                                                                            System.out.println("Recompensa 1.");
+                                                                            recompensasProyecto1 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 1 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa1=sc.nextInt();
+                                                                            break;
+                                                                        } else if (numRecompensas==2) {
+                                                                            System.out.println("Nuevas recompensas del Proyecto 2.");
+                                                                            System.out.println("Recompensa 1.");
+                                                                            recompensasProyecto1 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 1 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa1=sc.nextInt();
+                                                                            System.out.println("Recompensa 2.");
+                                                                            recompensasProyecto11 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 2 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa11=sc.nextInt();
+                                                                            break;
+                                                                        } else if (numRecompensas==3) {
+                                                                            System.out.println("Nuevas recompensas del Proyecto 2.");
+                                                                            System.out.println("Recompensa 1.");
+                                                                            recompensasProyecto2 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 1 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa2=sc.nextInt();
+                                                                            System.out.println("Recompensa 2.");
+                                                                            recompensasProyecto22 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 2 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa22=sc.nextInt();
+                                                                            System.out.println("Recompensa 3.");
+                                                                            recompensasProyecto222 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 3 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa222=sc.nextInt();
+                                                                            break;
+                                                                        } else if (numRecompensas==0) {
+                                                                            System.out.println("Este proyecto no tiene recompensas.");
+                                                                            break;
+                                                                        }
                                                                     case 2 :
                                                                         recompensasProyecto2 = "";
+                                                                        recompensasProyecto22="";
+                                                                        recompensasProyecto222="";
                                                                         break;
                                                                     case 3 :
                                                                         System.out.println("Saliste exitosamente.");
@@ -725,7 +812,7 @@ public class FernanStarter {
                                                                 eliminarFechaFin = sc.nextInt();
                                                                 switch (eliminarFechaFin){
                                                                     case 1 :
-                                                                        System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                                        System.out.println("Nueva cantidad fecha fin apertura del proyecto.");
                                                                         fechaFinProyecto3 = sc.next();
                                                                         break;
                                                                     case 2 :
@@ -745,11 +832,53 @@ public class FernanStarter {
                                                                 eliminarrecompensas = sc.nextInt();
                                                                 switch (eliminarrecompensas){
                                                                     case 1 :
-                                                                        System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
-                                                                        recompensasProyecto3 = sc.next();
-                                                                        break;
+                                                                        if (numRecompensas==1){
+                                                                            System.out.println("Nuevas recompensas del Proyecto 3.");
+                                                                            System.out.println("Recompensa 1.");
+                                                                            recompensasProyecto3 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 1 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa3=sc.nextInt();
+                                                                            break;
+                                                                        } else if (numRecompensas==2) {
+                                                                            System.out.println("Nuevas recompensas del Proyecto 3.");
+                                                                            System.out.println("Recompensa 1.");
+                                                                            recompensasProyecto3 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 1 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa3=sc.nextInt();
+                                                                            System.out.println("Recompensa 2.");
+                                                                            recompensasProyecto33 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 2 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa33=sc.nextInt();
+                                                                            break;
+                                                                        } else if (numRecompensas==3) {
+                                                                            System.out.println("Nuevas recompensas del Proyecto 3.");
+                                                                            System.out.println("Recompensa 1.");
+                                                                            recompensasProyecto3 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 1 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa3=sc.nextInt();
+                                                                            System.out.println("Recompensa 2.");
+                                                                            recompensasProyecto33 = sc.next();
+                                                                            System.out.println("Precio de Recompensa 2 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa33=sc.nextInt();
+                                                                            System.out.println("Recompensa 3.");
+                                                                            recompensasProyecto333   = sc.next();
+                                                                            System.out.println("Precio de Recompensa 3 actual.");
+                                                                            System.out.println("Nuevo precio: ");
+                                                                            precioRecompensa333 =sc.nextInt();
+                                                                            break;
+                                                                        } else if (numRecompensas==0) {
+                                                                            System.out.println("Este proyecto no tiene recompensas.");
+                                                                            break;
+                                                                        }
                                                                     case 2 :
                                                                         recompensasProyecto3 = "";
+                                                                        recompensasProyecto33="";
+                                                                        recompensasProyecto333="";
                                                                         break;
                                                                     case 3 :
                                                                         System.out.println("Saliste exitosamente.");
@@ -854,38 +983,46 @@ public class FernanStarter {
                                                             switch (numRecompensas){
                                                                 case 1:
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto1 = sc.next();
+                                                                    sc.nextLine();
+                                                                    recompensasProyecto1 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa1 = sc.nextInt();
+                                                                    sc.nextLine();
                                                                     break;
                                                                 case 2:
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto1 = sc.next();
+                                                                    sc.nextLine();
+                                                                    recompensasProyecto1 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa1 = sc.nextInt();
+                                                                    sc.nextLine();
 
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto11 = sc.next();
+                                                                    recompensasProyecto11 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa11 = sc.nextInt();
+                                                                    sc.nextLine();
                                                                     break;
                                                                 case 3:
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto1 = sc.next();
+                                                                    sc.nextLine();
+                                                                    recompensasProyecto1 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa1 = sc.nextInt();
+                                                                    sc.nextLine();
 
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto11 = sc.next();
+                                                                    recompensasProyecto11 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa11 = sc.nextInt();
+                                                                    sc.nextLine();
 
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto111 = sc.next();
+                                                                    recompensasProyecto111 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa111 = sc.nextInt();
+                                                                    sc.nextLine();
                                                                     break;
-
                                                             }
                                                         }else {
                                                             System.out.println("Número no valido.");
@@ -933,36 +1070,44 @@ public class FernanStarter {
                                                             switch (numRecompensas){
                                                                 case 1:
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto2 = sc.next();
+                                                                    sc.nextLine();
+                                                                    recompensasProyecto2 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa2 = sc.nextInt();
+                                                                    sc.nextLine();
                                                                     break;
                                                                 case 2:
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto2 = sc.next();
+                                                                    sc.nextLine();
+                                                                    recompensasProyecto2 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa2 = sc.nextInt();
+                                                                    sc.nextLine();
 
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto22 = sc.next();
+                                                                    recompensasProyecto22 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa22 = sc.nextInt();
+                                                                    sc.nextLine();
                                                                     break;
                                                                 case 3:
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto2 = sc.next();
+                                                                    sc.nextLine();
+                                                                    recompensasProyecto2 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa2 = sc.nextInt();
 
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto22 = sc.next();
+                                                                    recompensasProyecto22 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa22 = sc.nextInt();
+                                                                    sc.nextLine();
 
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto222 = sc.next();
+                                                                    recompensasProyecto222 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa222 = sc.nextInt();
+                                                                    sc.nextLine();
                                                                     break;
 
                                                             }
@@ -1013,36 +1158,45 @@ public class FernanStarter {
                                                             switch (numRecompensas){
                                                                 case 1:
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto3 = sc.next();
+                                                                    sc.nextLine();
+                                                                    recompensasProyecto3 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa3 = sc.nextInt();
+                                                                    sc.nextLine();
                                                                     break;
                                                                 case 2:
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto3 = sc.next();
+                                                                    sc.nextLine();
+                                                                    recompensasProyecto3 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa3 = sc.nextInt();
+                                                                    sc.nextLine();
 
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto33 = sc.next();
+                                                                    recompensasProyecto33 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa33 = sc.nextInt();
+                                                                    sc.nextLine();
                                                                     break;
                                                                 case 3:
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto3 = sc.next();
+                                                                    sc.nextLine();
+                                                                    recompensasProyecto3 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa3 = sc.nextInt();
+                                                                    sc.nextLine();
 
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto33 = sc.next();
+                                                                    recompensasProyecto33 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa33 = sc.nextInt();
+                                                                    sc.nextLine();
 
                                                                     System.out.println("1. Descripcion de la recompensa");
-                                                                    recompensasProyecto333 = sc.next();
+                                                                    recompensasProyecto333 = sc.nextLine();
                                                                     System.out.println("2. Precio de la Recompensa");
                                                                     precioRecompensa333 = sc.nextInt();
+                                                                    sc.nextLine();
                                                                     break;
 
                                                             }
@@ -1343,7 +1497,7 @@ public class FernanStarter {
                                                     eliminarFechaFin = sc.nextInt();
                                                     switch (eliminarFechaFin){
                                                         case 1 :
-                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            System.out.println("Nueva cantidad fecha fin apertura del proyecto.");
                                                             fechaFinProyecto1 = sc.next();
                                                             break;
                                                         case 2 :
@@ -1356,18 +1510,60 @@ public class FernanStarter {
                                                             System.out.println("Tienes que meter una de las opciones");
                                                             break;
                                                     }
-                                                    System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto1);
+                                                    System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto1+recompensasProyecto11+recompensasProyecto111);
                                                     System.out.println("1. Modificar");
                                                     System.out.println("2. Eliminar");
                                                     System.out.println("3. Salir");
                                                     eliminarrecompensas = sc.nextInt();
                                                     switch (eliminarrecompensas){
                                                         case 1 :
-                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
-                                                            recompensasProyecto1 = sc.next();
-                                                            break;
+                                                            if (numRecompensas==1){
+                                                                System.out.println("Nuevas recompensas del Proyecto 1.");
+                                                                System.out.println("Recompensa 1.");
+                                                                recompensasProyecto1 = sc.next();
+                                                                System.out.println("Precio de Recompensa 1 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa1=sc.nextInt();
+                                                                break;
+                                                            } else if (numRecompensas==2) {
+                                                                System.out.println("Nuevas recompensas del Proyecto 1.");
+                                                                System.out.println("Recompensa 1.");
+                                                                recompensasProyecto1 = sc.next();
+                                                                System.out.println("Precio de Recompensa 1 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa1=sc.nextInt();
+                                                                System.out.println("Recompensa 2.");
+                                                                recompensasProyecto11 = sc.next();
+                                                                System.out.println("Precio de Recompensa 2 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa11=sc.nextInt();
+                                                                break;
+                                                            } else if (numRecompensas==3) {
+                                                                System.out.println("Nuevas recompensas del Proyecto 1.");
+                                                                System.out.println("Recompensa 1.");
+                                                                recompensasProyecto1 = sc.next();
+                                                                System.out.println("Precio de Recompensa 1 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa1=sc.nextInt();
+                                                                System.out.println("Recompensa 2.");
+                                                                recompensasProyecto11 = sc.next();
+                                                                System.out.println("Precio de Recompensa 2 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa11=sc.nextInt();
+                                                                System.out.println("Recompensa 3.");
+                                                                recompensasProyecto111 = sc.next();
+                                                                System.out.println("Precio de Recompensa 3 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa111=sc.nextInt();
+                                                                break;
+                                                            } else if (numRecompensas==0) {
+                                                                System.out.println("Este proyecto no tiene recompensas.");
+                                                                break;
+                                                            }
                                                         case 2 :
                                                             recompensasProyecto1 = "";
+                                                            recompensasProyecto11 = "";
+                                                            recompensasProyecto111 = "";
                                                             break;
                                                         case 3 :
                                                             System.out.println("Saliste exitosamente.");
@@ -1449,7 +1645,7 @@ public class FernanStarter {
                                                     eliminarCantidadFi = sc.nextInt();
                                                     switch (eliminarCantidadFi){
                                                         case 1 :
-                                                            System.out.println("Nueva cantidad necesaria del proyecto.");
+                                                            System.out.println("Nueva cantidad financiada del proyecto.");
                                                             cantidadFinanciadaProyecto2 = sc.nextFloat();
                                                             break;
                                                         case 2 :
@@ -1489,7 +1685,7 @@ public class FernanStarter {
                                                     eliminarFechaFin = sc.nextInt();
                                                     switch (eliminarFechaFin){
                                                         case 1 :
-                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            System.out.println("Nueva cantidad fecha fin apertura del proyecto.");
                                                             fechaFinProyecto2 = sc.next();
                                                             break;
                                                         case 2 :
@@ -1502,18 +1698,60 @@ public class FernanStarter {
                                                             System.out.println("Tienes que meter una de las opciones");
                                                             break;
                                                     }
-                                                    System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto2);
+                                                    System.out.println("Deseas eliminar o modificar recompensas del proyecto. "+recompensasProyecto2+recompensasProyecto22+recompensasProyecto222);
                                                     System.out.println("1. Modificar");
                                                     System.out.println("2. Eliminar");
                                                     System.out.println("3. Salir");
                                                     eliminarrecompensas = sc.nextInt();
                                                     switch (eliminarrecompensas){
                                                         case 1 :
-                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
-                                                            recompensasProyecto2 = sc.next();
-                                                            break;
+                                                            if (numRecompensas==1){
+                                                                System.out.println("Nuevas recompensas del Proyecto 2.");
+                                                                System.out.println("Recompensa 1.");
+                                                                recompensasProyecto2 = sc.next();
+                                                                System.out.println("Precio de Recompensa 1 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa2=sc.nextInt();
+                                                                break;
+                                                            } else if (numRecompensas==2) {
+                                                                System.out.println("Nuevas recompensas del Proyecto 2.");
+                                                                System.out.println("Recompensa 1.");
+                                                                recompensasProyecto2 = sc.next();
+                                                                System.out.println("Precio de Recompensa 1 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa2=sc.nextInt();
+                                                                System.out.println("Recompensa 2.");
+                                                                recompensasProyecto22 = sc.next();
+                                                                System.out.println("Precio de Recompensa 2 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa22=sc.nextInt();
+                                                                break;
+                                                            } else if (numRecompensas==3) {
+                                                                System.out.println("Nuevas recompensas del Proyecto 2.");
+                                                                System.out.println("Recompensa 1.");
+                                                                recompensasProyecto2 = sc.next();
+                                                                System.out.println("Precio de Recompensa 1 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa2=sc.nextInt();
+                                                                System.out.println("Recompensa 2.");
+                                                                recompensasProyecto22 = sc.next();
+                                                                System.out.println("Precio de Recompensa 2 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa22=sc.nextInt();
+                                                                System.out.println("Recompensa 3.");
+                                                                recompensasProyecto222 = sc.next();
+                                                                System.out.println("Precio de Recompensa 3 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa222=sc.nextInt();
+                                                                break;
+                                                            } else if (numRecompensas==0) {
+                                                                System.out.println("Este proyecto no tiene recompensas.");
+                                                                break;
+                                                            }
                                                         case 2 :
                                                             recompensasProyecto2 = "";
+                                                            recompensasProyecto22 = "";
+                                                            recompensasProyecto222 = "";
                                                             break;
                                                         case 3 :
                                                             System.out.println("Saliste exitosamente.");
@@ -1635,7 +1873,7 @@ public class FernanStarter {
                                                     eliminarFechaFin = sc.nextInt();
                                                     switch (eliminarFechaFin){
                                                         case 1 :
-                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
+                                                            System.out.println("Nueva cantidad fecha fin apertura del proyecto.");
                                                             fechaFinProyecto3 = sc.next();
                                                             break;
                                                         case 2 :
@@ -1655,11 +1893,53 @@ public class FernanStarter {
                                                     eliminarrecompensas = sc.nextInt();
                                                     switch (eliminarrecompensas){
                                                         case 1 :
-                                                            System.out.println("Nueva cantidad fecha inicio apertura del proyecto.");
-                                                            recompensasProyecto3 = sc.next();
-                                                            break;
+                                                            if (numRecompensas==1){
+                                                                System.out.println("Nuevas recompensas del Proyecto 3.");
+                                                                System.out.println("Recompensa 1.");
+                                                                recompensasProyecto3 = sc.next();
+                                                                System.out.println("Precio de Recompensa 1 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa3=sc.nextInt();
+                                                                break;
+                                                            } else if (numRecompensas==2) {
+                                                                System.out.println("Nuevas recompensas del Proyecto 3.");
+                                                                System.out.println("Recompensa 1.");
+                                                                recompensasProyecto3 = sc.next();
+                                                                System.out.println("Precio de Recompensa 1 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa3=sc.nextInt();
+                                                                System.out.println("Recompensa 2.");
+                                                                recompensasProyecto33 = sc.next();
+                                                                System.out.println("Precio de Recompensa 2 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa33=sc.nextInt();
+                                                                break;
+                                                            } else if (numRecompensas==3) {
+                                                                System.out.println("Nuevas recompensas del Proyecto 3.");
+                                                                System.out.println("Recompensa 1.");
+                                                                recompensasProyecto3 = sc.next();
+                                                                System.out.println("Precio de Recompensa 1 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa3=sc.nextInt();
+                                                                System.out.println("Recompensa 2.");
+                                                                recompensasProyecto33 = sc.next();
+                                                                System.out.println("Precio de Recompensa 2 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa33=sc.nextInt();
+                                                                System.out.println("Recompensa 3.");
+                                                                recompensasProyecto333 = sc.next();
+                                                                System.out.println("Precio de Recompensa 3 actual.");
+                                                                System.out.println("Nuevo precio: ");
+                                                                precioRecompensa333=sc.nextInt();
+                                                                break;
+                                                            } else if (numRecompensas==0) {
+                                                                System.out.println("Este proyecto no tiene recompensas.");
+                                                                break;
+                                                            }
                                                         case 2 :
                                                             recompensasProyecto3 = "";
+                                                            recompensasProyecto33="";
+                                                            recompensasProyecto333="";
                                                             break;
                                                         case 3 :
                                                             System.out.println("Saliste exitosamente.");
@@ -1675,6 +1955,7 @@ public class FernanStarter {
                                                     break;
                                             }
                                         }
+                                        break;
                                     case 4:
                                         System.out.println("Bienvenido a la configuración.");
                                         do {
