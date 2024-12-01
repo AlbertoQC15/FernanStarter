@@ -194,7 +194,7 @@ public class FernanStarter {
                                                             System.out.println("No tienes recompensas");
                                                         }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
-                                                        float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                        float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
                                                         for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
                                                             System.out.print("█");
                                                         }
@@ -217,7 +217,7 @@ public class FernanStarter {
                                                             System.out.println("No tienes recompensas");
                                                         }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
-                                                        float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                        float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
                                                         for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
                                                             System.out.print("█");
                                                         }
@@ -239,7 +239,7 @@ public class FernanStarter {
                                                             System.out.println("No tienes recompensas");
                                                         }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
-                                                        float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                                        float porcentajeProyecto2=((cantidadFinanciadaProyecto2 + (inversionProyecto2Inversor1 + inversionProyecto2Inversor2)) /cantidadNecesariaProyecto2)*100;
                                                         for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
                                                             System.out.print("█");
                                                         }
@@ -262,7 +262,7 @@ public class FernanStarter {
                                                             System.out.println("No tienes recompensas");
                                                         }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 1.*******");
-                                                        float porcentajeProyecto1=(cantidadFinanciadaProyecto1/cantidadNecesariaProyecto1)*100;
+                                                        float porcentajeProyecto1=((cantidadFinanciadaProyecto1 + (inversionProyecto1Inversor1 + inversionProyecto1Inversor2)) /cantidadNecesariaProyecto1)*100;
                                                         for (int i = 0; i <porcentajeProyecto1 ; i+=2) {
                                                             System.out.print("█");
                                                         }
@@ -284,7 +284,7 @@ public class FernanStarter {
                                                             System.out.println("No tienes recompensas");
                                                         }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 2.*******");
-                                                        float porcentajeProyecto2=(cantidadFinanciadaProyecto2/cantidadNecesariaProyecto2)*100;
+                                                        float porcentajeProyecto2=((cantidadFinanciadaProyecto2 + (inversionProyecto2Inversor1 + inversionProyecto2Inversor2)) /cantidadNecesariaProyecto2)*100;
                                                         for (int i = 0; i <porcentajeProyecto2 ; i+=2) {
                                                             System.out.print("█");
                                                         }
@@ -306,7 +306,7 @@ public class FernanStarter {
                                                             System.out.println("No tienes recompensas");
                                                         }
                                                         System.out.println("*******Gráfico de Barras de la financiaciación del proyecto 3.*******");
-                                                        float porcentajeProyecto3=(cantidadFinanciadaProyecto3/cantidadNecesariaProyecto3)*100;
+                                                        float porcentajeProyecto3=((cantidadFinanciadaProyecto3 + (inversionProyecto3Inversor1 + inversionProyecto3Inversor2)) /cantidadNecesariaProyecto3)*100;
                                                         for (int i = 0; i <porcentajeProyecto3 ; i+=2) {
                                                             System.out.print("█");
                                                         }
