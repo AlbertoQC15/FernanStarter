@@ -92,6 +92,9 @@ public class FernanStarter {
         int cantidadInvertida2Proyecto3=0;
         boolean bloqueadoInversor2=false;
     int intentos=0;
+        int intentosGestor=0;
+        int intentosInversor1=0;
+        int intentosInversor2=0;
     boolean acceso=false;
     do{
         System.out.println("*****Bienvenidos al sistema de acceso*****");
@@ -1991,8 +1994,8 @@ public class FernanStarter {
 
                         } else {
                             System.out.println("Login fallido");
-                            intentos++;
-                            if (intentos == 3)
+                            intentosGestor++;
+                            if (intentosGestor == 3)
                                 bloqueadoGestor = true;
                         }
                     } else if (usuarioPedido.equals(inversor1)) {
@@ -2404,8 +2407,8 @@ public class FernanStarter {
                             acceso=false;
                         } else {
                             System.out.println("Login fallido");
-                            intentos++;
-                            if (intentos == 3)
+                            intentosInversor1++;
+                            if (intentosInversor1 == 3)
                                 bloqueadoInversor1 = true;
                         }
                     } else if (usuarioPedido.equals(inversor2)) {
@@ -2816,10 +2819,12 @@ public class FernanStarter {
                             acceso=false;
                         } else {
                             System.out.println("Login fallido");
-                            intentos++;
-                            if (intentos == 3)
+                            intentosInversor2++;
+                            if (intentosInversor2 == 3)
                                 bloqueadoInversor2 = true;
+                            break;
                         }
+                        break;
                     } else {
                         System.out.println("No hay ningun usuario con ese nombre o contraseña");
                         intentos++;
