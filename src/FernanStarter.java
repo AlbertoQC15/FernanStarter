@@ -1,5 +1,7 @@
-import java.util.Scanner;
+import BibliotecaFunciones.Funciones;
 
+import java.util.Scanner;
+import static BibliotecaFunciones.Funciones.*;
 public class FernanStarter {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -97,8 +99,7 @@ public class FernanStarter {
         int intentosInversor2=0;
     boolean acceso=false;
     do{
-        System.out.println("*****Bienvenidos al sistema de acceso*****");
-        System.out.println("Si quiere hacer login pulse 1, si quiere salir del programa 2.");
+        Funciones.inicioPrograma();
         inicioPrograma=sc.nextInt();
         switch(inicioPrograma){
             case 1:
@@ -113,20 +114,12 @@ public class FernanStarter {
                             acceso = true;
                             //Menu administrador
                             do {
-                                System.out.println("-----Menú Administrador-----");
-                                System.out.println("1. Panel de control");
-                                System.out.println("2. Proyectos");
-                                System.out.println("3. Configuración");
-                                System.out.println("4. Cerrar sesión");
+                                Funciones.menuAdministrador();
                                 opcionAdmi = sc.nextInt();
-
                                 switch (opcionAdmi) {
                                     case 1:
                                         do {
-                                            System.out.println("Bienvenido al Panel de control que deseas");
-                                            System.out.println("1.Bloquear");
-                                            System.out.println("2.Desbloquear");
-                                            System.out.println("3.Salir");
+                                            Funciones.panelControlAdministrador();
                                             menubloq = sc.nextInt();
                                             switch (menubloq) {
                                                 case 1:
@@ -170,13 +163,8 @@ public class FernanStarter {
                                     case 2:
                                         System.out.println("Bienvenido a Proyectos que deseas");
                                         do {
-                                            System.out.println("--------------------------------------");
-                                            System.out.println("1. Visualizar Proyectos creados");
-                                            System.out.println("2. Modificar o eliminar Proyectos");
-                                            System.out.println("3. Salir");
-                                            System.out.println("--------------------------------------");
+                                            Funciones.proyectosControlAdministrador();
                                             menuproyec = sc.nextInt();
-
                                             switch (menuproyec){
                                                 case 1:
                                                     if (numerosProyectos == 0) {
@@ -946,12 +934,7 @@ public class FernanStarter {
                             acceso = true;
                             //MENÚ GESTOR.
                             do {
-                                System.out.println("-----Menú Gestor-----");
-                                System.out.println("1. Mis proyectos.");
-                                System.out.println("2. Vista detallada de los proyectos.");
-                                System.out.println("3. Modificar o eliminar datos de los proyectos.");
-                                System.out.println("4. Configuración.");
-                                System.out.println("5. Cerrar sesión.");
+                                Funciones.menuGestor();
                                 opcionGestor = sc.nextInt();
                                 switch (opcionGestor) {
                                     case 1:
@@ -1962,9 +1945,7 @@ public class FernanStarter {
                                     case 4:
                                         System.out.println("Bienvenido a la configuración.");
                                         do {
-                                            System.out.println("1. Cambiar nombre de usuario.");
-                                            System.out.println("2. Cambiar la contraseña de usuario.");
-                                            System.out.println("3. Salir.");
+                                           Funciones.configuracionGestor();
                                             menuconfGestor = sc.nextInt();
                                             switch (menuconfGestor) {
                                                 case 1:
@@ -2007,12 +1988,7 @@ public class FernanStarter {
                             //MENÚ INVERSOR 1
                             do {
                                 System.out.println("------MENÚ INVERSOR 1------");
-                                System.out.println("1. Mis inversiones.");
-                                System.out.println("2. Proyectos.");
-                                System.out.println("3. Cartera digital.");
-                                System.out.println("4. Invitar a un amigo.");
-                                System.out.println("5. Configuración.");
-                                System.out.println("6. Cerrar sesión.");
+                                Funciones.menuInversores();
                                 opcionInversor1 = sc.nextInt();
                                 switch (opcionInversor1) {
                                     case 1:
@@ -2229,9 +2205,7 @@ public class FernanStarter {
                                                     if (numerosProyectos==0){
                                                         System.out.println("No hay ningún proyecto para invertir.");
                                                     }else if (numerosProyectos==1) {
-                                                        System.out.println("¿En qué proyecto quieres invertir?");
-                                                        System.out.println("1. Invertir en el proyecto 1.");
-                                                        System.out.println("2. Salir.");
+                                                        Funciones.menuInvertirProyectos1();
                                                         menuInvertirProyectos = sc.nextInt();
                                                         switch (menuInvertirProyectos) {
                                                             case 1:
@@ -2251,10 +2225,7 @@ public class FernanStarter {
                                                                 break;
                                                         }
                                                     } else if (numerosProyectos==2) {
-                                                        System.out.println("¿En qué proyecto quieres invertir?");
-                                                        System.out.println("1. Invertir en el proyecto 1.");
-                                                        System.out.println("2. Invertir en el proyecto 2.");
-                                                        System.out.println("3. Salir.");
+                                                        Funciones.menuInvertirProyectos2();
                                                         menuInvertirProyectos = sc.nextInt();
                                                         switch (menuInvertirProyectos) {
                                                             case 1:
@@ -2286,11 +2257,7 @@ public class FernanStarter {
                                                                 break;
                                                         }
                                                     } else if (numerosProyectos==3) {
-                                                        System.out.println("¿En qué proyecto quieres invertir?");
-                                                        System.out.println("1. Invertir en el proyecto 1.");
-                                                        System.out.println("2. Invertir en el proyecto 2.");
-                                                        System.out.println("3. Invertir en el proyecto 3.");
-                                                        System.out.println("4. Salir.");
+                                                        Funciones.menuInvertirProyectos3();
                                                         menuInvertirProyectos = sc.nextInt();
                                                         switch (menuInvertirProyectos) {
                                                             case 1:
@@ -2342,10 +2309,7 @@ public class FernanStarter {
                                     case 4:
                                         System.out.println("-----Menú de tus amigos-----");
                                         do {
-                                            System.out.println("1. Mostrar lista de amigos referidos");
-                                            System.out.println("2. Añadir un nuevo amigo");
-                                            System.out.println("3. Salir");
-                                            System.out.println("Seleccione una opción: ");
+                                            Funciones.menuInversoresAmigos();
                                             opcionAgregar = sc.nextInt();
                                             switch (opcionAgregar) {
                                                 case 1:
@@ -2378,9 +2342,7 @@ public class FernanStarter {
                                     case 5:
                                         System.out.println("Bienvenido a la configuración.");
                                         do {
-                                            System.out.println("1. Cambiar nombre de usuario.");
-                                            System.out.println("2. Cambiar la contraseña de usuario.");
-                                            System.out.println("3. Salir.");
+                                           Funciones.menuInversoresAmigos();
                                             menuConfInversor1 = sc.nextInt();
                                             switch (menuConfInversor1) {
                                                 case 1:
@@ -2420,12 +2382,7 @@ public class FernanStarter {
                             //MENÚ INVERSOR 2
                             do {
                                 System.out.println("------MENÚ INVERSOR 2------");
-                                System.out.println("1. Mis inversiones.");
-                                System.out.println("2. Proyectos.");
-                                System.out.println("3. Cartera digital.");
-                                System.out.println("4. Invitar a un amigo.");
-                                System.out.println("5. Configuración.");
-                                System.out.println("6. Cerrar sesión.");
+                                Funciones.menuInversores();
                                 opcionInversor2 = sc.nextInt();
                                 switch (opcionInversor2) {
                                     case 1:
@@ -2641,9 +2598,7 @@ public class FernanStarter {
                                                 if (numerosProyectos==0){
                                                     System.out.println("No hay ningún proyecto para invertir.");
                                                 }else if (numerosProyectos==1) {
-                                                    System.out.println("¿En qué proyecto quieres invertir?");
-                                                    System.out.println("1. Invertir en el proyecto 1.");
-                                                    System.out.println("2. Salir.");
+                                                    Funciones.menuInvertirProyectos1();
                                                     menuInvertirProyectos2 = sc.nextInt();
                                                     switch (menuInvertirProyectos2) {
                                                         case 1:
@@ -2663,10 +2618,7 @@ public class FernanStarter {
                                                             break;
                                                     }
                                                 } else if (numerosProyectos==2) {
-                                                    System.out.println("¿En qué proyecto quieres invertir?");
-                                                    System.out.println("1. Invertir en el proyecto 1.");
-                                                    System.out.println("2. Invertir en el proyecto 2.");
-                                                    System.out.println("3. Salir.");
+                                                    Funciones.menuInvertirProyectos2();
                                                     menuInvertirProyectos = sc.nextInt();
                                                     switch (menuInvertirProyectos) {
                                                         case 1:
@@ -2698,11 +2650,7 @@ public class FernanStarter {
                                                             break;
                                                     }
                                                 } else if (numerosProyectos==3) {
-                                                    System.out.println("¿En qué proyecto quieres invertir?");
-                                                    System.out.println("1. Invertir en el proyecto 1.");
-                                                    System.out.println("2. Invertir en el proyecto 2.");
-                                                    System.out.println("3. Invertir en el proyecto 3.");
-                                                    System.out.println("4. Salir.");
+                                                    Funciones.menuInvertirProyectos3();
                                                     menuInvertirProyectos = sc.nextInt();
                                                     switch (menuInvertirProyectos) {
                                                         case 1:
