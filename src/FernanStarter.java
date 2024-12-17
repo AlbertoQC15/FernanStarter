@@ -110,6 +110,7 @@ public class FernanStarter {
                     contraPedido = sc.next();
                     if (usuarioPedido.equals(usuarioAdministrador)) {
                         if (contraPedido.equals(contraAdministrador)) {
+                            Funciones.verificacion_Email();
                             System.out.println("Login realizado. Bienvenido " + usuarioAdministrador);
                             acceso = true;
                             //Menu administrador
@@ -885,6 +886,7 @@ public class FernanStarter {
                         if (bloqueadoGestor) {
                             System.out.println("Este usuario esta bloqueado, solo el Administrador puede desbloquearlo.");
                         } else if (contraPedido.equals(contraGestor)) {
+                            Funciones.verificacion_Email();
                             System.out.println("Login realizado. Bienvenido " + usuarioGestor);
                             acceso = true;
                             //MENÚ GESTOR.
@@ -1500,6 +1502,7 @@ public class FernanStarter {
                         if (bloqueadoInversor1) {
                             System.out.println("Este usuario esta bloqueado, solo el Administrador puede desbloquearlo.");
                         } else if (contraPedido.equals(inversorContra)) {
+                            Funciones.verificacion_Email();
                             System.out.println("Login realizado. Bienvenido " + inversor1);
                             acceso = true;
                             //MENÚ INVERSOR 1
@@ -1851,6 +1854,7 @@ public class FernanStarter {
                         if (bloqueadoInversor2) {
                             System.out.println("Este usuario esta bloqueado, solo el Administrador puede desbloquearlo.");
                         } else if (contraPedido.equals(inversor2Contra)) {
+                            Funciones.verificacion_Email();
                             System.out.println("Login realizado. Bienvenido " + inversor2);
                             acceso = true;
                             //MENÚ INVERSOR 2

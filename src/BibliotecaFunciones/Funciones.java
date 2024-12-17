@@ -1,5 +1,6 @@
 package BibliotecaFunciones;
 import java.util.Scanner;
+import static BibliotecaFunciones.Email.*;
 
 public class Funciones {
 
@@ -32,6 +33,53 @@ public class Funciones {
     private static boolean bloqueadoGestor = false;
     private static boolean bloqueadoInversor1 = false;
     private static boolean bloqueadoInversor2 = false;
+
+
+
+    public static void verificacion_Email() {
+        Scanner s = new Scanner(System.in);
+        String usuario = "jesus.garcia.1207@fernando3martos.com";
+        String contrasena = "1234";
+
+        int codigoIntento;
+        String usuarioIntento;
+        String contraenaIntento;
+        int codigo = (int)(Math.random()*9000+1000);
+        int intentoCodigo =3;
+        int intentoInicio =3;
+        String asunto = "Código de verificación";
+        String cuerpo = "El código de verificación  para acceder a tu cuenta es " + codigo;
+        do {
+            System.out.println("Introduce tu usuario (correo-e)");
+            usuarioIntento = s.nextLine();
+            System.out.println("Introduce la contraseña (1234)");
+            contraenaIntento = s.nextLine();
+            if (!usuarioIntento.equals(usuario) || !contraenaIntento.equals(contrasena)){
+                intentoInicio--;
+                System.out.println("Usuario o contraseña incorrectos. Te quedan "+intentoInicio+ " intentos.");
+            }
+        }while ((!usuarioIntento.equals(usuario) || !contraenaIntento.equals(contrasena)) && intentoInicio>0);
+        if (intentoInicio>0) {
+            do {
+                System.out.println("Por favor introduce el código que te hemos mandado a tu correo");
+                enviarConGMail(usuario, asunto, cuerpo);
+                codigoIntento = Integer.parseInt(s.nextLine());
+                if (codigoIntento!=codigo){
+                    intentoCodigo--;
+                    System.out.println("Código erróneo. Te quedan "+ intentoCodigo +" intentos.");
+                    codigo= (int)(Math.random()*9000+1000);
+                }
+            } while (codigoIntento != codigo && intentoCodigo > 0);
+            if (codigoIntento == codigo) {
+                System.out.println("¡Verificación correctamente realizada!");
+            }else{
+                System.out.println("Cuenta bloqueada. Contacte con el administrador.");
+            }
+        }else {
+            System.out.println("Cuenta bloqueada. Contacte con el administrador.");
+        }
+    }
+
 
     public static void inicioPrograma(){
         System.out.println("*****Bienvenidos al sistema de acceso*****");
