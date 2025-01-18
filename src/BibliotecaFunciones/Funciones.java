@@ -1,10 +1,427 @@
 package BibliotecaFunciones;
 import java.util.Scanner;
-import static BibliotecaFunciones.Email.*;
-
 public class Funciones {
+        public static Scanner sc = new Scanner(System.in);
 
-    public static String usuarioAdministrador = "Administrador";
+        public static final int MaximodeUsuarios = 10;
+    public static String tipoUsuario;
+        public static final int MaximodeProyectos = 20;
+        public static final int MaximodeRecompensas = 3;
+
+   //Contraseña
+   public static boolean verificarContrasenasIguales(String contrasena1, String contrasena2) {
+       return contrasena1.equals(contrasena2);
+   }
+
+    public static boolean evaluarFortalezaContrasena(String contrasena) {
+
+        if (contrasena.length() < 8) {
+            return false;
+        }
+        boolean tieneMinuscula = false;
+        boolean tieneMayuscula = false;
+        boolean tieneNumero = false;
+        boolean tieneSimbolo = false;
+        String simbolosPermitidos = "-_.,*+@";
+
+        for (char c : contrasena.toCharArray()) {
+            if (Character.isLowerCase(c)) {
+                tieneMinuscula = true;
+            } else if (Character.isUpperCase(c)) {
+                tieneMayuscula = true;
+            } else if (Character.isDigit(c)) {
+                tieneNumero = true;
+            } else if (simbolosPermitidos.indexOf(c) != -1) {
+                tieneSimbolo = true;
+            }
+            if (tieneMinuscula && tieneMayuscula && tieneNumero && tieneSimbolo) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean comprobarLongitudTexto(String texto, int minimo, int maximo) {
+        int longitud = texto.length();
+        return longitud >= minimo && longitud <= maximo;
+    }
+
+    public static boolean comprobarFormatoTexto(String texto, char simbolo) {
+        switch (simbolo) {
+            case '%':
+                return texto.contains("%");
+            case '€':
+                return texto.contains("€");
+            default:
+                return false;
+        }
+    }
+    public static boolean iniciarSesion(String nombre, String contrasena) {
+        for (int i = 0; i < contadorUsuarios; i++) {
+            if (usuarios[i][0].equals(nombre)) {
+                if (usuarios[i][4].equalsIgnoreCase("Sí")) {
+                    System.out.println("El usuario está bloqueado. Contacte con un administrador.");
+                    return false;
+                }
+                if (usuarios[i][1].equals(contrasena)) {
+                    System.out.println("Inicio de sesión exitoso.");
+                    return true;
+                } else {
+                    int intentos = Integer.parseInt(usuarios[i][3]) + 1;
+                    usuarios[i][3] = String.valueOf(intentos);
+
+                    if (intentos >= 3) {
+                        usuarios[i][4] = "Sí";
+                        System.out.println("Usuario bloqueado por múltiples intentos fallidos.");
+                    } else {
+                        System.out.printf("Contraseña incorrecta. Intentos restantes: %d.\n", 3 - intentos);
+                    }
+                    return false;
+                }
+            }
+        }
+        System.out.println("Usuario no encontrado.");
+        return false;
+    }
+
+    public static void bloquearUsuario(String adminNombre, String usuarioNombre, boolean bloquear) {
+        for (int i = 0; i < contadorUsuarios; i++) {
+            if (usuarios[i][0].equals(adminNombre) && usuarios[i][2].equalsIgnoreCase("Administrador")) {
+                for (int j = 0; j < contadorUsuarios; j++) {
+                    if (usuarios[j][0].equals(usuarioNombre)) {
+                        usuarios[j][4] = bloquear ? "Sí" : "No";
+                        String estado = bloquear ? "bloqueado" : "desbloqueado";
+                        System.out.printf("Usuario %s %s exitosamente.\n", usuarioNombre, estado);
+                        return;
+                    }
+                }
+                System.out.println("Usuario objetivo no encontrado.");
+                return;
+            }
+        }
+        System.out.println("Acción no permitida. Solo un administrador puede bloquear/desbloquear usuarios.");
+    }
+
+
+
+
+    public static String[][] usuarios = new String[MaximodeUsuarios][5];
+    public static String[][] proyectos = new String[MaximodeProyectos][8 + (2 * MaximodeRecompensas)];
+
+    public static int contadorUsuarios = 0;
+    public static int contadorProyectos = 0;
+
+
+    public static void bloquearDesbloquearUsuario() {
+        System.out.println("Ingrese el nombre del usuario a bloquear/desbloquear: ");
+        String usuarioNombre = sc.nextLine().toLowerCase();
+        System.out.println("¿Desea bloquear? (Sí/No): ");
+        String respuesta = sc.nextLine().toLowerCase();
+
+        boolean bloquear = respuesta.equalsIgnoreCase("si");
+        boolean usuarioEncontrado = false;
+        for (int i = 0; i < contadorUsuarios; i++) {
+            System.out.println("Revisando usuario: " + usuarios[i][0]);
+            if (usuarios[i][0].equals(usuarioNombre)) {
+                usuarioEncontrado = true;
+
+                System.out.println("Usuario " + usuarioNombre + (bloquear ? " bloqueado" : " desbloqueado"));
+                break;
+            }
+        }
+
+        if (!usuarioEncontrado) {
+            System.out.println("Usuario no encontrado.");
+        }
+    }
+
+    public static void crearProyectoConRecompensa() {
+        System.out.print("Nombre del proyecto: ");
+        String nombre = sc.nextLine();
+        System.out.print("Categoría del proyecto: ");
+        String categoria = sc.nextLine();
+        System.out.print("Fecha de inicio (yyyy-mm-dd): ");
+        String fechaInicio = sc.nextLine();
+        System.out.print("Fecha de fin (yyyy-mm-dd): ");
+        String fechaFin = sc.nextLine();
+        System.out.print("Cantidad necesaria para financiar: ");
+        String cantidadNecesaria = sc.nextLine();
+
+        proyectos[contadorProyectos][0] = nombre;
+        proyectos[contadorProyectos][1] = categoria;
+        proyectos[contadorProyectos][2] = fechaInicio;
+        proyectos[contadorProyectos][3] = fechaFin;
+        proyectos[contadorProyectos][4] = cantidadNecesaria;
+        proyectos[contadorProyectos][5] = "0";
+
+        System.out.print("Descripción de la recompensa: ");
+        String descripcion = sc.nextLine();
+        System.out.print("Precio de la recompensa: ");
+        String precio = sc.nextLine();
+
+        agregarRecompensa(contadorProyectos, descripcion, precio);
+
+        contadorProyectos++;
+        System.out.println("Proyecto creado exitosamente.");
+    }
+
+    public static void editarProyectoConRecompensa() {
+
+        System.out.println("\n--- Proyectos disponibles para editar ---");
+        for (int i = 0; i < contadorProyectos; i++) {
+            System.out.println((i + 1) + ". " + proyectos[i][0]);
+        }
+        System.out.print("Ingrese el nombre del proyecto que desea editar: ");
+        String nombreProyecto = sc.nextLine();
+
+        int proyectoSeleccionado = -1;
+        for (int i = 0; i < contadorProyectos; i++) {
+            if (proyectos[i][0].equalsIgnoreCase(nombreProyecto)) {
+                proyectoSeleccionado = i;
+                break;
+            }
+        }
+        if (proyectoSeleccionado == -1) {
+            System.out.println("Proyecto no encontrado.");
+            return;
+        }
+
+        System.out.print("Nuevo nombre del proyecto: ");
+        String nuevoNombre = sc.nextLine();
+        System.out.print("Nueva categoría: ");
+        String nuevaCategoria = sc.nextLine();
+        System.out.print("Nueva fecha de inicio: ");
+        String nuevaFechaInicio = sc.nextLine();
+        System.out.print("Nueva fecha de fin: ");
+        String nuevaFechaFin = sc.nextLine();
+        System.out.print("Nueva cantidad necesaria: ");
+        String nuevaCantidadNecesaria = sc.nextLine();
+
+        proyectos[proyectoSeleccionado][0] = nuevoNombre;
+        proyectos[proyectoSeleccionado][1] = nuevaCategoria;
+        proyectos[proyectoSeleccionado][2] = nuevaFechaInicio;
+        proyectos[proyectoSeleccionado][3] = nuevaFechaFin;
+        proyectos[proyectoSeleccionado][4] = nuevaCantidadNecesaria;
+
+        System.out.print("Descripción de la recompensa: ");
+        String descripcion = sc.nextLine();
+        System.out.print("Precio de la recompensa: ");
+        String precio = sc.nextLine();
+        agregarRecompensa(proyectoSeleccionado, descripcion, precio);
+
+        System.out.println("Proyecto editado exitosamente.");
+    }
+
+    public static void cambiarNombreYContrasena() {
+        System.out.print("Ingrese el nuevo nombre de usuario: ");
+        String nuevoNombre = sc.nextLine();
+        System.out.print("Ingrese la nueva contraseña: ");
+        String nuevaContrasena = sc.nextLine();
+
+        usuarios[0][0] = nuevoNombre;
+        usuarios[0][1] = nuevaContrasena;
+
+        System.out.println("Nombre y contraseña actualizados exitosamente.");
+    }
+
+    public static void mostrarMenuAdministrador() {
+        int opcion = 0;
+        do {
+            System.out.println("\n--- Menú Administrador ---");
+            System.out.println("1. Bloquear/Desbloquear usuario");
+            System.out.println("2. Crear proyecto con recompensa");
+            System.out.println("3. Editar proyecto con recompensa");
+            System.out.println("4. Mostrar proyectos creados");
+            System.out.println("5. Cambiar nombre y contraseña");
+            System.out.println("6. Salir");
+            System.out.print("Seleccione una opción: ");
+            
+                opcion = sc.nextInt();
+
+                switch (opcion) {
+                    case 1:
+                        bloquearDesbloquearUsuario();
+                        break;
+                    case 2:
+                        crearProyectoConRecompensa();
+                        break;
+                    case 3:
+                        editarProyectoConRecompensa();
+                        break;
+                    case 4:
+                        mostrarProyectos();
+                        break;
+                    case 5:
+                        cambiarNombreYContrasena();
+                        break;
+                    case 6:
+                        System.out.println("Saliendo...");
+                        return;
+                    default:
+                        System.out.println("Por favor ingrese un número válido.");
+                         break;
+                }
+            } while (opcion !=6);
+        }
+
+
+    public static String obtenerTipoUsuario(String nombreUsuario) {
+        for (int i = 0; i < contadorUsuarios; i++) {
+            if (usuarios[i][0].equals(nombreUsuario)) {
+                return usuarios[i][2];
+            }
+        }
+        return null;
+    }
+
+    public static void crearUsuario(String nombre, String contrasena, String contrasenaConfirmacion, String tipo, String saldo) {
+        if (contadorUsuarios < MaximodeUsuarios) {
+            if (!verificarContrasenasIguales(contrasena, contrasenaConfirmacion)) {
+                System.out.println("Las contraseñas no coinciden.");
+                return;
+            }
+            if (!evaluarFortalezaContrasena(contrasena)) {
+                System.out.println("La contraseña no es lo suficientemente fuerte. Debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas, números y un símbolo.");
+                return;
+            }
+            if (!tipo.equalsIgnoreCase("Gestor") && !tipo.equalsIgnoreCase("Inversor") && !tipo.equalsIgnoreCase("Administrador")) {
+                System.out.println("Tipo de usuario no válido. Solo se permiten Administrador, Gestor o Inversor.");
+                return;
+            }
+            if (tipo.equalsIgnoreCase("Administrador")) {
+                for (int i = 0; i < contadorUsuarios; i++) {
+                    if (usuarios[i][2].equalsIgnoreCase("Administrador")) {
+                        System.out.println("Ya existe un administrador. No se puede crear otro.");
+                        return;
+                    }
+                }
+            }
+            if (tipo.equalsIgnoreCase("Inversor")) {
+                if (Float.parseFloat(saldo) < 0) {
+                    System.out.println("El saldo no puede ser negativo.");
+                    return;
+                }
+            } else {
+                saldo = "0";
+            }
+            usuarios[contadorUsuarios][0] = nombre;
+            usuarios[contadorUsuarios][1] = contrasena;
+            usuarios[contadorUsuarios][2] = tipo;
+            usuarios[contadorUsuarios][3] = saldo;
+            usuarios[contadorUsuarios][4] = "No";
+            contadorUsuarios++;
+            System.out.println("Usuario creado exitosamente.");
+        } else {
+            System.out.println("Límite de usuarios alcanzado.");
+        }
+    }
+
+
+    public static void mostrarUsuarios() {
+        System.out.println("\n--- Usuarios Registrados ---");
+        for (int i = 0; i < contadorUsuarios; i++) {
+            System.out.printf("Usuario %d: %s (Tipo: %s, Bloqueado: %s, Saldo: %s€)\n",
+                    i + 1, usuarios[i][0], usuarios[i][2], usuarios[i][4], usuarios[i][3]);
+        }
+    }
+
+    public static void crearProyecto(String nombre, String categoria, String fechaInicio, String fechaFin, String cantidadNecesaria, String tipoUsuario) {
+        if (!tipoUsuario.equalsIgnoreCase("Administrador") && !tipoUsuario.equalsIgnoreCase("Gestor")) {
+            System.out.println("No tiene permisos para crear proyectos.");
+            return;
+        }
+        if (contadorProyectos < MaximodeProyectos) {
+            proyectos[contadorProyectos][0] = nombre;
+            proyectos[contadorProyectos][1] = categoria;
+            proyectos[contadorProyectos][2] = fechaInicio;
+            proyectos[contadorProyectos][3] = fechaFin;
+            proyectos[contadorProyectos][4] = cantidadNecesaria;
+            proyectos[contadorProyectos][5] = "0";
+            contadorProyectos++;
+            System.out.println("Proyecto creado exitosamente.");
+        } else {
+            System.out.println("Límite de proyectos alcanzado.");
+        }
+    }
+
+    public static void agregarRecompensa(int proyectoIndex, String descripcion, String precio, String tipoUsuario) {
+        if (!tipoUsuario.equalsIgnoreCase("Administrador") && !tipoUsuario.equalsIgnoreCase("Gestor")) {
+            System.out.println("No tiene permisos para agregar recompensas.");
+            return;
+        }
+        if (proyectoIndex >= 0 && proyectoIndex < contadorProyectos) {
+            for (int i = 0; i < MaximodeRecompensas; i++) {
+                int baseIndex = 6 + (2 * i);
+                if (proyectos[proyectoIndex][baseIndex] == null) {
+                    proyectos[proyectoIndex][baseIndex] = descripcion;
+                    proyectos[proyectoIndex][baseIndex + 1] = precio;
+                    System.out.println("Recompensa agregada exitosamente.");
+                    return;
+                }
+            }
+            System.out.println("El proyecto ya tiene el máximo de recompensas.");
+        }
+    }
+
+    public static void editarProyecto(int proyectoIndex, String nuevoNombre, String nuevaCategoria, String nuevoFechaInicio, String nuevoFechaFin, String nuevaCantidadNecesaria, String tipoUsuario) {
+        if (!tipoUsuario.equalsIgnoreCase("Administrador") && !tipoUsuario.equalsIgnoreCase("Gestor")) {
+            System.out.println("No tiene permisos para editar proyectos.");
+            return;
+        }
+        if (proyectoIndex >= 0 && proyectoIndex < contadorProyectos) {
+            proyectos[proyectoIndex][0] = nuevoNombre;
+            proyectos[proyectoIndex][1] = nuevaCategoria;
+            proyectos[proyectoIndex][2] = nuevoFechaInicio;
+            proyectos[proyectoIndex][3] = nuevoFechaFin;
+            proyectos[proyectoIndex][4] = nuevaCantidadNecesaria;
+            System.out.println("Proyecto editado exitosamente.");
+        }
+    }
+
+    public static void agregarRecompensa(int proyectoIndex, String descripcion, String precio) {
+        if (proyectoIndex >= 0 && proyectoIndex < contadorProyectos) {
+            for (int i = 0; i < MaximodeRecompensas; i++) {
+                int baseIndex = 6 + (2 * i);
+                if (proyectos[proyectoIndex][baseIndex] == null) {
+                    proyectos[proyectoIndex][baseIndex] = descripcion;
+                    proyectos[proyectoIndex][baseIndex + 1] = precio;
+                    return;
+                }
+            }
+            System.out.println("El proyecto ya tiene el máximo de recompensas.");
+        }
+    }
+
+    public static void mostrarProyectos() {
+        System.out.println("\n--- Proyectos Disponibles ---");
+
+        for (int i = 0; i < contadorProyectos; i++) {
+            System.out.printf("Proyecto %d: %s (Categoría: %s, Financiado: %s/%s€)\n",
+                    i + 1, proyectos[i][0], proyectos[i][1], proyectos[i][5], proyectos[i][4]);
+            System.out.println("  Recompensas:");
+            for (int j = 0; j < MaximodeRecompensas; j++) {
+                int mostrarRecompensa = 6 + (2 * j);
+                if (proyectos[i][mostrarRecompensa] != null) {
+                    System.out.printf("    - %s: %s€\n", proyectos[i][mostrarRecompensa], proyectos[i][mostrarRecompensa + 1]);
+                }
+            }
+        }
+    }
+
+    public static void invertirEnProyecto(int proyectoIndex, float cantidad, String tipoUsuario) {
+        if (!tipoUsuario.equalsIgnoreCase("Inversor")) {
+            System.out.println("Solo los inversores pueden invertir en proyectos.");
+            return;
+        }
+        if (proyectoIndex >= 0 && proyectoIndex < contadorProyectos) {
+            float financiadoActual = Float.parseFloat(proyectos[proyectoIndex][5]);
+            proyectos[proyectoIndex][5] = String.valueOf(financiadoActual + cantidad);
+            System.out.println("Inversión realizada exitosamente.");
+        }
+    }
+
+
+    /* public static String usuarioAdministrador = "Administrador";
     public static String contraAdministrador = "1234";
 
     public static String usuarioGestor = "Gestor";
@@ -1017,4 +1434,6 @@ public class Funciones {
         System.out.println("2. Cambiar la contraseña de usuario.");
         System.out.println("3. Salir.");
     }
+    */
+
 }
