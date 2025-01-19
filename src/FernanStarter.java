@@ -44,6 +44,12 @@ public class FernanStarter {
                         tipoUsuario = obtenerTipoUsuario(nombreUsuario);
                         if (tipoUsuario != null && tipoUsuario.equalsIgnoreCase("Administrador")) {
                             mostrarMenuAdministrador();
+                        } else if (tipoUsuario != null && tipoUsuario.equalsIgnoreCase("Gestor")) {
+                            mostrarMenuGestor();
+                        } else if (tipoUsuario != null && tipoUsuario.equalsIgnoreCase("Inversor")) {
+                            mostrarMenuInversor();
+                        }else{
+                            System.out.println("No existe.");
                         }
                     }
                     break;
