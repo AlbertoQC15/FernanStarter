@@ -52,10 +52,5 @@ public class Proyecto{
     public void setCantidadNecesaria(double cantidadNecesaria) {
         this.cantidadNecesaria = cantidadNecesaria;
     }
-
-    public void invertir(double cantidad) {
-        if (cantidad > 0) {
-            this.cantidadFinanciada += cantidad;
-        }
     }
-}
+

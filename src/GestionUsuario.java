@@ -5,12 +5,12 @@ public class GestionUsuario {
     private static int contadorId = 1;
     private static boolean adminCreado = false;
 
-    public static void insertarUsuario(String nombre, String email, TipoUsuario tipo) {
+    public static void insertarUsuario(String nombre, String email, TipoUsuario tipo, String contrasena) {
         if (tipo == TipoUsuario.ADMIN && adminCreado) {
             System.out.println("Ya existe un administrador. No se puede crear otro.");
             return;
         }
-        Usuario nuevoUsuario = new Usuario(contadorId++, nombre, email, tipo);
+        Usuario nuevoUsuario = new Usuario(contadorId++, nombre, email, tipo, contrasena);
         usuarios.add(nuevoUsuario);
         if (tipo == TipoUsuario.ADMIN) {
             adminCreado = true;
