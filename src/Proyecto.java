@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Proyecto extends GestionProyecto {
+public class Proyecto{
 
     public String nombre;
     public String descripcion;
@@ -11,9 +11,9 @@ public class Proyecto extends GestionProyecto {
     public LocalDate fechaInicio;
     public LocalDate fechaFin;
     public ArrayList<String> recompensas;
+    private String creador;
 
-    public Proyecto(String nombre, String descripcion, String categoria, double cantidadNecesaria, LocalDate fechaInicio, LocalDate fechaFin) {
-        super();
+    public Proyecto(String nombre, String descripcion, String categoria, double cantidadNecesaria, LocalDate fechaInicio, LocalDate fechaFin, String creador) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.categoria = categoria;
@@ -22,65 +22,40 @@ public class Proyecto extends GestionProyecto {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.recompensas = new ArrayList<>();
-    }
-
-    public void agregarRecompensa(String recompensa) {
-        recompensas.add(recompensa);
-    }
-
-    public ArrayList<String> getRecompensas() {
-        return recompensas;
+        this.creador = creador;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getDescripcion() {
         return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
     }
 
     public double getCantidadNecesaria() {
         return cantidadNecesaria;
     }
 
-    public void setCantidadNecesaria(double cantidadNecesaria) {
-        this.cantidadNecesaria = cantidadNecesaria;
-    }
-
     public double getCantidadFinanciada() {
         return cantidadFinanciada;
     }
 
-    public LocalDate getFechaInicio() {
-        return fechaInicio;
+    public String getCreador() {
+        return creador;
     }
 
-    public void setFechaInicio(LocalDate fechaInicio) {
-        this.fechaInicio = fechaInicio;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
-    public LocalDate getFechaFin() {
-        return fechaFin;
+    public void setCantidadNecesaria(double cantidadNecesaria) {
+        this.cantidadNecesaria = cantidadNecesaria;
     }
 
-    public void setFechaFin(LocalDate fechaFin) {
-        this.fechaFin = fechaFin;
+    public void invertir(double cantidad) {
+        if (cantidad > 0) {
+            this.cantidadFinanciada += cantidad;
+        }
     }
 }
