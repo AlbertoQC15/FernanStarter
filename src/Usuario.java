@@ -1,4 +1,4 @@
-public class Usuario {
+public abstract class  Usuario {
     private int id;
     private String nombre;
     private String email;
@@ -40,7 +40,7 @@ public class Usuario {
     public void setTipo(TipoUsuario tipo) {
         this.tipo = tipo;
     }
-    public String toString() {
+    public  String toString() {
         return "Usuario{id=" + id + ", nombre='" + nombre + "', email='" + email + "', tipo=" + tipo + "}";
     }
     public void cambiarNombre(String nuevoNombre) {

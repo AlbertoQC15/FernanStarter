@@ -8,4 +8,7 @@ class Administrador extends Usuario implements Bloqueable {
     public void desbloquearUsuario(Usuario usuario) {
         System.out.println("Usuario " + usuario.getNombre() + " desbloqueado.");
     }
+    public String toString() {
+        return "Administrador{id=" + getId() + ", nombre='" + getNombre() + "', email='" + getEmail() + "'}";
+    }
 }

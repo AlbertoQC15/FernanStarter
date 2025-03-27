@@ -10,13 +10,29 @@ public class GestionUsuario {
             System.out.println("Ya existe un administrador. No se puede crear otro.");
             return;
         }
-        Usuario nuevoUsuario = new Usuario(contadorId++, nombre, email, tipo, contrasena);
-        usuarios.add(nuevoUsuario);
-        if (tipo == TipoUsuario.ADMIN) {
-            adminCreado = true;
+
+        Usuario nuevoUsuario;
+
+        switch (tipo) {
+            case ADMIN:
+                nuevoUsuario = new Administrador(contadorId++, nombre, email, contrasena);
+                adminCreado = true;
+                break;
+            case GESTOR:
+                nuevoUsuario = new Gestor(contadorId++, nombre, email,tipo, contrasena);
+                break;
+            case INVERSOR:
+                nuevoUsuario = new Inversor(contadorId++, nombre, email,tipo, contrasena);
+                break;
+            default:
+                System.out.println("Tipo de usuario no válido.");
+                return;
         }
+
+        usuarios.add(nuevoUsuario);
         System.out.println("Usuario agregado: " + nuevoUsuario);
     }
+
 
     public static Usuario buscarUsuario(int id) {
         for (Usuario usuario : usuarios) {
